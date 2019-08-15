@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Movich |</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="preloader" class="preloader-light">
+	<a data-menu-type="menu-box-full" href="index.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
+	<div id="preload-spinner"></div>
+</div>
+
+
+<div id="page-transitions" class="page-build">
+    <div class="page-bg fondo"></div>
+
+	<div class="header header-light header-logo-app">
+		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
+		<a data-menu-type="menu-box-full" href="index.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
+    </div>
+
+	<div id="menu-1" class="menu menu-sidebar-left menu-settings">
+        <div class="menu-bg gradient-body-1"></div>
+        <div class="menu-scroll">
+            <div class="menu-header">
+                <a class="menu-logo" href="index.html"></a>
+                <h1>Bienvenido</h1>
+                <p>Disfrute la experiencia Movich</p>
+            </div>
+            <div class="menu-list icon-background-active">
+                <em class="menu-divider top-10">Navegación</em>
+                <a class="menu-item active-menu" href="index.html"><i class="fa gradient-green-white fa-home"></i>Home</a>
+                <a class="menu-item" href="hoteles.html"><i class="fa gradient-green-white fa-info"></i>Nuestros Hoteles</a>
+                <a class="menu-item" href="https://bookings.movichhotels.com/search-hotels"><i class="fa gradient-green-white fa-file"></i>Reserve Aquí</a>
+                <a class="menu-item" href="huesped.html"><i class="fa gradient-green-white fa-hand-point-right"></i>Log In Huésped</a>
+                <a class="menu-item" href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
+                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
+                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
+            </div>
+            <em class="menu-copyright">Copyright <span class="copyright-year"></span> Movich Hotels. Todos los derechos Reservados</em>
+        </div>
+	</div>
+
+	<div class="page-content">
+
+           <h1 class="center-text text-shadow ultrabold color-white bottom-10" style="padding-top: 120%;">VIVE TU DESTINO CON EXCLUSIVIDAD</h1>
+           
+        
+				
+        <div id="footer-menu" class="footer-menu-4-icons footer-menu-style" >
+            <a href="hoteles.html" class="active-nav"><i class="fa fa-info"></i><span>Nuestros Hoteles</span></a>
+            <a href="https://bookings.movichhotels.com/search-hotels"><i class="fa fa-calendar"></i><span>Reserve Aqui</span></a>
+            <a href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa fa-phone"></i><span>Contáctenos</span></a>
+            <a href="huesped.html"><i class="fa fa-bed"></i><span>Log In Huésped</span></a>
+            <div class="clear"></div>
+        </div>
+        
+	</div>
+    
+    
+	<a href="#" class="back-to-top-badge back-to-top-small shadow-large bg-blue-dark"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>
+<script type="text/javascript">
+    var deviceReady = function(){
+        if(window.MobileAccessibility){
+            window.MobileAccessibility.usePreferredTextZoom(false);
+        }		
+    }
+    document.addEventListener('deviceready', deviceReady, false);
+	
+	// Aqui Inicializo funciones de esta página papu.
+	controlIntro();
+	
+	var images = ['bg1.png', 'bg2.png', 'bg3.png', 'bg4.png', 'bg5.png'];
+    $('.fondo').css({'background-image': 'url(imgs/' + images[Math.floor(Math.random() * images.length)] + ')'});
+</script>
+
+</body>

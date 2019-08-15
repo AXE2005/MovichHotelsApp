@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="../favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="http://186.116.1.117/app/tv/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://186.116.1.117/app/tv/js/loading.min.css">
+    
+    <link rel="stylesheet" href="http://186.116.1.117/app/tv/css/styles.css">
+	<link rel="stylesheet" href="http://186.116.1.117/app/tv/css/stylesv2.css?v=1">
+    
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="../styles/framework.css">
+
+	<title>Cuenta</title>
+
+	<script src="js/jquery-3.3.1.min.js"></script> 
+	<script src="js/bootstrap.min.js"></script> 
+	<script src="js/jquery.loading.min.js"></script> 
+    
+   <style>
+   .botones {
+    width: 100% !important;
+    max-width: 120px !important;
+   } 
+   a {
+    color: #fff !important;
+	}
+	body {
+	height:100%;
+	background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+	}
+   </style>
+
+</head>
+
+<body>
+	<!-- HEADER -->
+
+
+	<!--CONTENT-->
+	<div class="container">
+
+
+<div id="page-transitions" class="page-build">
+    <div class="page-bg bg-img fondo"></div>
+
+	<div class="header header-light header-logo-app">
+		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
+		<a data-menu-type="menu-box-full" href="../index_huesped.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="http://186.116.1.117/app/images/logo.png"></a>
+    </div>
+
+	<div id="menu-1" class="menu menu-sidebar-left menu-settings">
+        <div class="menu-bg gradient-body-1"></div>
+        <div class="menu-scroll">
+            <div class="menu-header">
+                <a class="menu-logo" href="../index_huesped.html"></a>
+                <h1>Bienvenido</h1>
+                <p>Disfrute la experiencia Movich</p>
+            </div>
+            <div class="menu-list icon-background-active">
+                <em class="menu-divider top-10">Navegación</em>
+                <a class="menu-item active-menu" href="../index_huesped.html"><i class="fa gradient-green-white fa-home"></i>Home</a>
+                <a class="menu-item" href="../hoteles.html"><i class="fa gradient-green-white fa-info"></i>Nuestros Hoteles</a>
+                <a class="menu-item" href="#" onclick="salir()"><i class="fa gradient-green-white fa-hand-point-right"></i>Salir</a>
+                <a class="menu-item" onclick="abrir_loader()" href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
+                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
+                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
+            </div>
+            <em class="menu-copyright">Copyright <span class="copyright-year"></span> Movich Hotels. Todos los derechos Reservados</em>
+        </div>
+	</div>
+
+
+	<div class="page-content">
+    
+<div id="mainContent" class="card border-0 overflow-auto py-3"> 
+					<h5 class="section-title mb-2">
+						Servicios del Hotel
+					</h5>
+					<div class="text-white text-center">
+						<button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" onclick="loadContent('Conserjería')">
+							<img class="botones" src="http://186.116.1.117/app/tv/imagesjv/icon_consejeria.svg" alt="Claro Video"> 
+                            <br><span style="white-space: normal;font-size: 1rem">Conserjería</span>
+						</button>
+						<button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" onclick="loadContent('Ama de llaves')">
+							<img class="botones" src="http://186.116.1.117/app/tv/imagesjv/icon_housekeeper.svg" alt="Youtube">
+                            <br><span style="white-space: normal;font-size: 1rem">Ama de llaves</span>
+						</button>
+						
+					</div>
+                    <div class="card-text text-white text-center">
+<button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" onclick="loadContent('Mantenimiento')">
+							<img class="botones" src="http://186.116.1.117/app/tv/imagesjv/icon_mantenimiento.svg" alt="Chrome"> 
+                            <br><span style="white-space: normal;font-size: 0.95rem">Mantenimiento</span>
+						</button>
+<button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" onClick="print_vuelos()">
+							<img class="botones" src="http://186.116.1.117/app/tv/imagesjv/icon_horario_vuelos.svg" alt="Chrome">
+                            <br><span style="white-space: normal;font-size: 1rem">Vuelos</span>
+						</button>					
+
+                    </div>
+					<div class="card-text text-white text-center">
+						
+                        <button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" >
+							<img class="botones" src="http://186.116.1.117/app/tv/imagesjv/icon_imprimir.svg" alt="Chrome">
+                            <br><span style="white-space: normal;font-size: 1rem">Imprimir</span>
+						</button>
+                        <button type="button" class="col botones round-corners-menu-btn selectable texto-centrado">
+							<a href="./reservas.html" ><img class="botones" src="http://186.116.1.117/app/tv/imagesjv/icon_reservas.svg" alt="Chrome">
+                            <br><span style="white-space: normal;font-size: 1rem">Reservas</span>
+						</a></button>
+					</div>
+			
+				</div>
+            
+				<div id="variableContent" class="card border-0 overflow-auto pt-3" style="display: none;" > 
+					<h3 id="varTitle" class="section-title mb-5">
+						Consejeria
+					</h3>
+					<div class="card-text my-2 mx-3 text-white">
+					<img id="imgprint" class="card-img-top" src="http://186.116.1.117/app/tv/imgs/print.jpg" width="100%" height="100%" alt="Instrucciones de impresion" style="display: none;">
+						<p id="varText" class="text-justify">
+						</p>
+					</div>
+				</div>    
+    
+        <div id="footer-menu" class="footer-menu-4-icons footer-menu-style" >
+            <a href="../hoteles.html" class="active-nav"><i class="fa fa-info"></i><span>Nuestros Hoteles</span></a>
+            <a href="https://bookings.movichhotels.com/search-hotels"><i class="fa fa-calendar"></i><span>Reserve Aqui</span></a>
+            <a href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa fa-phone"></i><span>Contáctenos</span></a>
+            <a href="../huesped.html"><i class="fa fa-bed"></i><span>Log In Huésped</span></a>
+            <div class="clear"></div>
+        </div>
+        
+	</div>
+    
+    
+	<a href="#" class="back-to-top-badge back-to-top-small shadow-large bg-blue-dark"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+
+
+
+	</div>
+    
+<script type="text/javascript">
+  	var displaying='';
+  	function loadContent(btn){
+  		var animation="slideInRight";
+  		$("#variableContent").hide();
+		$("#mainContent").hide();
+  		//var btnName=$(btn)[0].innerText;
+		//alert (btnName);
+		//var sera = (btnName == "Ama de llaves");
+		//console.log("btname: "+btnName+ sera);
+  		$("#varTitle").html(btn);
+  		switch(btn){
+  			case("Conserjería"):
+			$("#imgprint").hide();
+  				//$("#varImage").attr("src","imagesjv/icon_consejeria.svg");
+  				$("#varText").html('<select name="consejeria" id="serv_opcion"> <option value="" disabled selected>Seleccionar</option> <option value="1">Atención Médica</option> <option value="2">Alarma</option> <option value="3">Transporte</option> <option value="4">Sitios de interés / Reservas</option><option value="5">Otro / Comentarios</option></select><br></br><h5 class="section-title mb-3 mx-0 selectable activable">Comentarios</h5><div class="comment-box selectable activable"><textarea id="serv_commentarios" class="round-corners-menu-btn activable selectable" id="comments" style="font-size:1rem;background:#333;width: 100%;min-height: 15vh;color:#aaa" placeholder="Ingrese comentarios sobre su solicitud aquí..."></textarea></div><button class="btn-text btn-border-inside selectable-contour selectable" onclick="goservicios(\'Conserjeria\')"><span>Enviar Solicitud</span></button>');
+  				break;
+  			case("Ama de llaves"):
+			$("#imgprint").hide();
+  				//$("#varImage").attr("src","imagesjv/icon_housekeeper.svg");
+  				$("#varText").html('<select name="consejeria" id="serv_opcion"> <option value="" disabled selected>Seleccionar</option> <option value="1">Amenities</option> <option value="2">Lencería adicional</option> <option value="3">Lavandería</option> <option value="4">Liempieza</option> <option value="5">Otro / Comentarios</option></select><br></br><h5 class="section-title mb-3 mx-0 selectable activable">Comentarios</h5><div class="comment-box selectable activable"><textarea id="serv_commentarios" class="round-corners-menu-btn activable selectable" id="comments" style="font-size:1rem;background:#333;width: 100%;min-height: 15vh;color:#aaa" placeholder="Ingrese comentarios sobre su solicitud aquí..."></textarea></div><button class="btn-text btn-border-inside selectable-contour selectable" onclick="goservicios(\'Ama de llaves\')"><span>Enviar Solicitud</span></button>');
+  				break;
+  			case("Mantenimiento"):
+			$("#imgprint").hide();
+  				//$("#varImage").attr("src","imagesjv/icon_mantenimiento.svg");
+  				$("#varText").html('<select name="consejeria" id="serv_opcion"> <option value="" disabled selected>Seleccionar</option> <option value="1">TV</option> <option value="2">Internet</option> <option value="3">Aire Acondicionado</option> <option value="4">Reparaciones (luz, baño, etc)</option> <option value="5">Otro / Comentarios</option></select><br></br><h5 class="section-title mb-3 mx-0 selectable activable">Comentarios</h5><div class="comment-box selectable activable"><textarea id="serv_commentarios" class="round-corners-menu-btn activable selectable" id="comments" style="font-size:1rem;background:#333;width: 100%;min-height: 15vh;color:#aaa" placeholder="Ingrese comentarios sobre su solicitud aquí..."></textarea></div><button class="btn-text btn-border-inside selectable-contour selectable" onclick="goservicios(\'Mantenimiento\')"><span>Enviar Solicitud</span></button>');
+  				break;
+  			case("Imprime documentos"):
+  				$("#imgprint").show();
+				$("#varText").html('');
+  				break;
+  			case("Reservas"):
+			$("#imgprint").hide();	
+			$("#varText").html('');			
+  				break;
+  		}
+  		if(!$('#variableContent').is(':visible')){
+  			$("#variableContent").addClass('animated '+animation);
+  			$("#variableContent").show();	       
+            //wait for animation to finish before removing classes
+            window.setTimeout( function(){
+                $("#variableContent").removeClass('animated '+animation);
+            }, 1000);
+        }
+  	}
+	
+	function goBack(){
+	
+		var animation="slideInRight";
+		$("#variableContent").hide();
+		$("#mainContent").hide();
+		if(!$('#mainContent').is(':visible')){
+				$("#mainContent").addClass('animated '+animation);
+				$("#mainContent").show();	       
+				//wait for animation to finish before removing classes
+				window.setTimeout( function(){
+					$("#mainContent").removeClass('animated '+animation);
+				}, 1000);
+		}
+
+	}
+
+</script>	
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageTitle">Solicitud al Hotel</h5>
+      </div>
+      <div class="modal-body" id="messageBody">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer" id="modalFooter">
+        <button type="button" class="btn-text btn-border-inside selectable-contour selectable edit-controls" data-dismiss="modal"><span>Cerrar</span></button>
+      </div>
+    </div>
+  </div>
+</div>    
+    
+<script type="text/javascript" src="../scripts/plugins.js"></script>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+<script src="js/funciones.js"></script>
+<script type="text/javascript">
+	var images = ['bg1.png', 'bg2.png', 'bg3.png', 'bg4.png', 'bg5.png'];
+    $('.fondo').css({'background-image': 'url(../imgs/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
+var contenido = localStorage.getItem("mem_contenido");
+    $('.menu-header').html(contenido);
+</script>
+</body>
+
+</html>

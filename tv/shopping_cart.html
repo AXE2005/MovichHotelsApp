@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="Description" content="DOMLauncher and DOMods, custom HTML5 Android Launcher.">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+	 <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/stylesv2.css">
+
+	<title>Carrito de compras</title>
+
+
+	<script src="js/jquery-3.3.1.min.js"></script> 
+	<script src="js/bootstrap.min.js"></script> 
+	<script src="js/jquery.navigate.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="js/custom-keyboard-navigation.js"></script>
+    <script src="js/jquery.loading.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="../styles/framework.css">
+
+<style type="text/css">
+
+#topMenu {
+    overflow: auto;
+}
+
+#pre-desc {
+	    line-height: 14px !important;
+}
+
+#box {
+  position:relative;
+  /*margin:0 auto;*/
+  padding:5px;
+}
+
+.scroller {
+  color:#ffffff;
+  width:40px;
+  text-align:center;
+  cursor:pointer;
+  display:none;
+  padding:5px;
+  margin-top:5px;
+}
+
+.scroller-right{
+  float:right;
+}
+
+.scroller-left {
+  float:left;
+}
+
+.wrapper {
+    position:relative;
+    margin:0 auto;
+    height: 45px;
+    overflow-x: auto;
+    white-space: nowrap;	
+	padding:5px;
+}
+
+.list {
+    /*position:absolute;*/
+    left:0px;
+    top:0px;
+  	min-width:3000px;
+  	margin-left:12px;
+    margin-top:0px;
+}
+
+
+.item{
+  	padding:10px;
+    float:left;
+	display:table-cell;
+    margin:1px;
+    position:relative;
+    text-align:center;
+    cursor:grab;
+    cursor:-webkit-grab;
+    color:#efefef;
+	border: 1px dotted #111;
+   vertical-align:middle;
+}
+
+.col-sm{
+ padding-right: 4px !important;
+ padding-left: 4px !important; 	
+	}
+	
+.container, .container-fullscreen {
+    margin-bottom: 5px !important;	
+}
+
+p {
+	margin-bottom: 0px !important;
+}
+
+.card {
+    margin: 0px !important;
+}
+
+.col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col-md-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+.col-md-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+
+.col-md-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+}
+
+.round-corners-menu-btnx {
+    background-color: #232323 !important;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    /* font-size: 1.3rem; */
+    padding: 0rem 0.5rem;
+    /* margin: 0.3rem 0rem; */
+    color: #ccc;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.round-corners-menu-btnx:active {
+	
+    padding-top: 0em;
+    padding-bottom: 0rem; 
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.round-corners-menu-btnx:hover, .round-corners-menu-btnx:focus, .round-corners-menu-btnx.selected {
+	border-bottom: solid #807f82 4px;
+	
+	background: rgba(255,255,255,0.05);
+	outline: none;
+	color:#fff;
+}
+
+
+.round-corners-menu-btnx.active {
+	outline: none;
+    color: #ffffff;
+    background: rgba(255,255,255,0.2);
+    font-weight: 700;
+}
+
+.round-corners-menu-btnx-centrado:hover, .round-corners-menu-btnx:focus, .round-corners-menu-btnx.selected {
+	background: rgba(255,255,255,0.05);
+	outline: none;
+	color:#fff;
+}
+
+.round-corners-menu-btnx-centrado:active {
+	
+	padding-top:0rem;
+	padding-bottom:0rem;
+	font-size: 1.2rem;
+	color:#777;
+}
+
+.round-corners-menu-btnx-centrado.active {
+	outline: none;
+    color: #ffffff;
+    background: rgba(255,255,255,0.2);
+    font-weight: 700;
+}
+
+.float-right {
+    float: right;
+    margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+.topx {
+    position: fixed;
+    top: 45px;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: black;
+}
+
+.col-4 {
+    max-width: 33.3333%;
+    flex: 0 0 33.3333%;
+}
+
+</style>
+
+</head>
+
+<body class="bg-secondary bg-img">
+
+<div class="header header-light header-logo-app">
+		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
+		<a data-menu-type="menu-box-full" href="#" class="back-button header-icon header-icon-m"><i class="fas fa-chevron-circle-left"></i></a>
+    </div>
+
+	<div id="menu-1" class="menu menu-sidebar-left menu-settings">
+        <div class="menu-bg gradient-body-1"></div>
+        <div class="menu-scroll">
+            <div class="menu-header">
+                <a class="menu-logo" href="../index.html"></a>
+                <h1>Bienvenido</h1>
+                <p>Disfrute la experiencia Movich</p>
+            </div>
+            <div class="menu-list icon-background-active">
+                <em class="menu-divider top-10">Navegación</em>
+                <a class="menu-item active-menu" href="../index_huesped.html"><i class="fa gradient-green-white fa-home"></i>Home</a>
+                <a class="menu-item" href="../hoteles.html"><i class="fa gradient-green-white fa-info"></i>Nuestros Hoteles</a>
+                <a class="menu-item" href="#" onclick="salir()"><i class="fa gradient-green-white fa-hand-point-right"></i>Salir</a>
+                <a class="menu-item" onclick="abrir_loader()" href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
+                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
+                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
+            </div>
+            <em class="menu-copyright">Copyright <span class="copyright-year"></span> Movich Hotels. Todos los derechos Reservados</em>
+        </div>
+	</div>
+
+	<!--CONTENT-->
+	<div class="container">
+		<div class="row">
+
+			<!--INFO-->
+			
+
+		
+			<div >
+					<div class="card border-0 overflow-auto">
+					<img class="card-img-top" src="imgs/restaurante.png" alt="Restaurante" style="padding-top:5px;">
+						<h3 class="section-title mb-5">
+							Carrito de Compras
+						</h3>
+						<div id="carritoContent" class="text-white">
+							<div class="total">
+								<span id="productsTotal" class="price">Total:&nbsp;&nbsp;$600.000</span>
+							</div>
+							<!-- Ejemplos items - este contenido sera reemplazado por javascript -->
+							<div>
+								<span class="text-nowrap">Alojamiento / Noche </span>
+								<div class="price-counter" style="display: inline-flex !important;">
+									<span>$150.000</span>
+									<div class="edit-controls">
+										<a class="btn-icon plus selectable-contour selectable" target="count-item1"><span class="fa fa-plus"></span></a>
+										<span id="count-item1" class="food-count">1</span>
+										<a class="btn-icon minus selectable-contour selectable" target="count-item1"><span class="fa fa-minus"></span></a>
+										<button class="btn-text btn-small btn-border-inside selectable-contour selectable">
+											<span>Eliminar</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- Fin Ejemplos items -->
+							
+							
+						</div>
+						<div class="text-center px-2 py-2">
+							<button class="btn-text btn-border-inside selectable-contour selectable edit-controls" onclick="hideEdit()">
+								<span>Guardar cambios</span>
+							</button>
+							<button class="btn-text btn-border-inside selectable-contour selectable edit-controls" onclick="hideEdit()">
+								<span>Cancelar</span>
+							</button>
+						</div>
+						
+						
+					</div>
+			</div>
+            
+
+		</div>
+	</div>
+
+
+
+	<!--FOOTER-->
+  <div id="futer" class="text-center px-2 py-2 border-top" style="position: absolute;bottom: 0;left:0;right: 0; background-color: #000000;">
+						<button id="selectedDefault" type="button" class=" btn-text btn-border-inside selectable-contour selectable activable" onclick="confirmarPedido()">
+									Pedir
+								</button>
+                                <button type="button" class="btn-text btn-border-inside selectable-contour selectable activable" onclick="showEdit()">
+									Editar
+								</button>
+                                <button type="button" class="btn-text btn-border-inside selectable-contour selectable activable" onclick="cancelarPedido()">
+									Cancelar pedido
+								</button>
+                                
+				</div>  
+		<script type="text/javascript" src="../scripts/plugins.js"></script>
+<script type="text/javascript" src="../scripts/custom.js"></script>
+  <script type="text/javascript">
+
+$(document).ready(function() {
+	
+
+	miCarrito();
+
+	$(".btn-icon.plus").unbind("click").on("click",function(){
+		var span_target=$(this).attr("target");
+		var id=span_target.replace("count-item","");
+		var current_count=$("#"+span_target).text();
+		var new_count=parseInt(current_count)+1;
+		$("#"+span_target).text(new_count+"");
+
+		var products=null;
+		if(localStorage.getItem('productos')!==null){
+	      products = JSON.parse(localStorage.getItem('productos'));
+	    }
+	    
+	    if(products!==null && products.length>0 && id!=""){
+	    	var proPrice=0;
+	    	for (var i = 0; i < products.length; i++) {
+	    		if(products[i].product_id==id){
+	    			products[i].product_qty=new_count;
+	    			break;
+	    		}
+	    	}
+	    	localStorage.setItem('productos',JSON.stringify(products));
+
+    		var total=obtenerTotal(products);
+    		$("#productsTotal").html('Total:&nbsp;&nbsp;$'+total.toFixed(2));
+	    }
+	});
+
+	$(".btn-icon.minus").on("click",function(){
+		var span_target=$(this).attr("target");
+		var id=span_target.replace("count-item","");
+		var current_count=$("#"+span_target).text();
+		var new_count=parseInt(current_count)-1;
+		if(new_count<1){
+			new_count=1;
+		}
+		$("#"+span_target).text(new_count+"");
+
+		var products=null;
+		if(localStorage.getItem('productos')!==null){
+	      products = JSON.parse(localStorage.getItem('productos'));
+	    }
+	    
+	    if(products!==null && products.length>0 && id!=""){
+	    	var proPrice=0;
+	    	for (var i = 0; i < products.length; i++) {
+	    		if(products[i].product_id==id){
+	    			products[i].product_qty=new_count;
+	    			break;
+	    		}
+	    	}
+	    	localStorage.setItem('productos',JSON.stringify(products));
+
+    		var total=obtenerTotal(products);
+    		$("#productsTotal").html('Total:&nbsp;&nbsp;$'+total.toFixed(2));
+	    }
+	});
+
+	$(".edit-controls").hide();
+
+
+
+});
+
+
+
+function showEdit(){
+	var animation1="fadeIn";
+	if(!$(".edit-controls").is(':visible')){
+		$(".edit-controls").addClass('animated '+animation1);
+		$(".edit-controls").show();	       
+        //wait for animation to finish before removing classes
+        window.setTimeout( function(){
+            $(".edit-controls").removeClass('animated '+animation1);
+        }, 1000);
+        initNavigate();
+    }
+}
+
+function hideEdit() {
+	var animation1="fadeOut";
+	if($(".edit-controls").is(':visible')){
+		$(".edit-controls").addClass('animated '+animation1);
+        //wait for animation to finish before removing classes
+        window.setTimeout( function(){
+            $(".edit-controls").removeClass('animated '+animation1);
+            $(".edit-controls").hide();	   
+            initNavigate();    
+        }, 1000);
+    }
+}
+
+
+</script>	
+
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageTitle">Resumen de orden</h5>
+      </div>
+      <div class="modal-body" id="messageBody">
+        <p>Modal body text goes here.</p>
+      </div>
+
+      
+      <div id="futer" class="text-center px-2 py-2 border-top">
+      <div class="py-2">
+        <button type="button" class="btn-text btn-border-inside selectable-contour selectable" onclick="sendPedido('CargoCuenta')"><span>Cargo a la Cuenta</span></button>
+      </div>
+      <div class="py-2">
+        <button type="button" class="btn-text btn-border-inside selectable-contour selectable" onclick="sendPedido('Efectivo')"><span>Efectivo</span></button>
+      </div>
+      <div class="py-2">
+        <button type="button" class="btn-text btn-border-inside selectable-contour selectable" onclick="sendPedido('TarjetaCredito')"><span>Tarjeta de Crédito</span></button>
+      </div>
+        <!-- <button type="button" class="btn-text btn-border-inside selectable-contour selectable" data-dismiss="modal"><span>Cancelar</span></button> -->
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+<script src="js/funciones.js"></script>
+</body>
+
+</html>
