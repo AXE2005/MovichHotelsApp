@@ -18,9 +18,11 @@ function controlIntro(){
 }
 
 function abrir_loader(){
+	$('.page-change-preloader').addClass('show-change-preloader');
+}
 
-$('.page-change-preloader').addClass('show-change-preloader');
-
+function cerrar_loader(){
+	$('.page-change-preloader').removeClass('show-change-preloader');
 }
 
 function salir(){

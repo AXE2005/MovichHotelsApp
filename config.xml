@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+        xmlns:gap	= "http://phonegap.com/ns/1.0"
+        id		   = "http___wifienter.com"
+        version 	= "1.0.0">
+
+   <name>Movich Hotels</name>
+
+<content src="index.html"/>
+
+<description>
+Powerfull Guest Tools for hospitality services.
+</description>
+
+ <author href="http://wifienter.com" email="alejandro.c@wifienter.net">
+Wifientertainment SAS - By Alejandro Osorio 2015-2018
+</author>
+
+   <icon src="icon.png" />
+   
+
+  <preference name="android-minSdkVersion" value="19" />
+
+<preference name='phonegap-version' value='cli-6.5.0' />
+   <preference name="target-device" value="universal" />
+
+<plugin name="cordova-plugin-whitelist" source="npm" />
+
+<allow-navigation href="*" />
+<allow-navigation href="http://*/*" />
+<allow-navigation href="https://*/*" />
+<allow-navigation href="data:*" />
+<access origin="content:///*" />
+<allow-intent href="*" />
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+<allow-intent href="tel:*" />
+<access launch-external="yes" origin="tel:*" />
+<access launch-external="yes" origin="whatsapp:*" />
+<allow-intent href="sms:*" />
+<allow-intent href="mailto:*" />
+<allow-intent href="geo:*" />
+<preference name="LoadUrlTimeoutValue" value="60000" />
+<access origin="https://*/*" />
+<access launch-external="yes" origin="tel:*" />
+<access launch-external="yes" origin="geo:*" />
+<access launch-external="yes" origin="mailto:*" />
+<access launch-external="yes" origin="sms:*" />
+<access launch-external="yes" origin="market:*" />
+<access origin="*" />
+<allow-navigation href="*" />
+<access origin="http://*/*" />
+
+</widget>
