@@ -24,19 +24,31 @@
 	<script src="js/jquery.loading.min.js"></script> 
     
    <style>
-   .botones {
-    width: 100% !important;
-    max-width: 120px !important;
-   } 
-   a {
+  
+  .botones {
+  width: 100% !important;
+  max-width: 120px !important;
+  } 
+
+  a {
     color: #fff !important;
 	}
+
 	body {
 	height:100%;
 	background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
+  background-repeat: no-repeat;
+  background-position: left top;
 	}
+
+  .card {
+    margin: 0 !important;
+  }    
+
+  p {
+    font-size: 13px !important;
+  }
+
    </style>
 
 </head>
@@ -53,8 +65,8 @@
     <div class="page-bg bg-img fondo"></div>
 
 	<div class="header header-light header-logo-app">
-		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
-		<a id="backico" data-menu-type="menu-box-full" href="#" onClick="goBack()" class="header-icon header-icon-m"><i class="fas fa-chevron-circle-left"></i></a>
+    <a data-menu-type="menu-box-full" href="../index_huesped.html" class="header-icon header-icon-1"><i class="fas fa-chevron-circle-left"></i></a>
+    <a id="logoico" data-menu-type="menu-box-full" href="../index_huesped.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="../images/logo.png"></a>
     </div>
 
 	<div id="menu-1" class="menu menu-sidebar-left menu-settings">
@@ -109,7 +121,7 @@
                     </div>
 					<div class="card-text text-white text-center">
 						
-                        <button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" >
+                        <button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" onclick="alert('Esta funcionalidad no se encuentra activa actualmente en su Hotel, le invitamos a utilizar nuestro centro de negocios.')">
 							<img class="botones" src="./imagesjv/icon_imprimir.svg" alt="Chrome">
                             <br><span style="white-space: normal;font-size: 1rem">Imprimir</span>
 						</button>
@@ -163,29 +175,20 @@
   		$("#varTitle").html(btn);
   		switch(btn){
   			case("Conserjería"):
-			$("#imgprint").hide();
-  				//$("#varImage").attr("src","imagesjv/icon_consejeria.svg");
   				$("#varText").html('<select name="consejeria" id="serv_opcion"> <option value="" disabled selected>Seleccionar</option> <option value="1">Atención Médica</option> <option value="2">Alarma</option> <option value="3">Transporte</option> <option value="4">Sitios de interés / Reservas</option><option value="5">Otro / Comentarios</option></select><br></br><h5 class="section-title mb-3 mx-0 selectable activable">Comentarios</h5><div class="comment-box selectable activable"><textarea id="serv_commentarios" class="round-corners-menu-btn activable selectable" id="comments" style="font-size:1rem;background:#333;width: 100%;min-height: 15vh;color:#aaa" placeholder="Ingrese comentarios sobre su solicitud aquí..."></textarea></div><button class="btn-text btn-border-inside selectable-contour selectable" onclick="goservicios(\'Conserjeria\')"><span>Enviar Solicitud</span></button>');
   				break;
   			case("Ama de llaves"):
-			$("#imgprint").hide();
-  				//$("#varImage").attr("src","imagesjv/icon_housekeeper.svg");
   				$("#varText").html('<select name="consejeria" id="serv_opcion"> <option value="" disabled selected>Seleccionar</option> <option value="1">Amenities</option> <option value="2">Lencería adicional</option> <option value="3">Lavandería</option> <option value="4">Liempieza</option> <option value="5">Otro / Comentarios</option></select><br></br><h5 class="section-title mb-3 mx-0 selectable activable">Comentarios</h5><div class="comment-box selectable activable"><textarea id="serv_commentarios" class="round-corners-menu-btn activable selectable" id="comments" style="font-size:1rem;background:#333;width: 100%;min-height: 15vh;color:#aaa" placeholder="Ingrese comentarios sobre su solicitud aquí..."></textarea></div><button class="btn-text btn-border-inside selectable-contour selectable" onclick="goservicios(\'Ama de llaves\')"><span>Enviar Solicitud</span></button>');
   				break;
   			case("Mantenimiento"):
-			$("#imgprint").hide();
-  				//$("#varImage").attr("src","imagesjv/icon_mantenimiento.svg");
   				$("#varText").html('<select name="consejeria" id="serv_opcion"> <option value="" disabled selected>Seleccionar</option> <option value="1">TV</option> <option value="2">Internet</option> <option value="3">Aire Acondicionado</option> <option value="4">Reparaciones (luz, baño, etc)</option> <option value="5">Otro / Comentarios</option></select><br></br><h5 class="section-title mb-3 mx-0 selectable activable">Comentarios</h5><div class="comment-box selectable activable"><textarea id="serv_commentarios" class="round-corners-menu-btn activable selectable" id="comments" style="font-size:1rem;background:#333;width: 100%;min-height: 15vh;color:#aaa" placeholder="Ingrese comentarios sobre su solicitud aquí..."></textarea></div><button class="btn-text btn-border-inside selectable-contour selectable" onclick="goservicios(\'Mantenimiento\')"><span>Enviar Solicitud</span></button>');
   				break;
-  			case("Imprime documentos"):
-  				$("#imgprint").show();
-				$("#varText").html('');
-  				break;
   			case("Reservas"):
-			$("#imgprint").hide();	
-			$("#varText").html('');			
+			      $("#imgprint").hide();	
+		        $("#varText").html('');			
   				break;
   		}
+
   		if(!$('#variableContent').is(':visible')){
   			$("#variableContent").addClass('animated '+animation);
   			$("#variableContent").show();	       
@@ -230,8 +233,7 @@
   </div>
 </div>    
     
-<script type="text/javascript" src="../scripts/plugins.js"></script>
-<script type="text/javascript" src="../scripts/custom.js"></script>
+
 <script src="js/funciones.js"></script>
 <script type="text/javascript">
 	var images = ['bg1.png', 'bg2.png', 'bg3.png', 'bg4.png', 'bg5.png'];

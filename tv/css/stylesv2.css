@@ -510,7 +510,7 @@ text-align: center !important;
     float: right !important;
 }
 
-.aerolinea { font-weight: 600; font-size: 1.1em; }
+.aerolinea { font-weight: 600; font-size: 0.8em; }
 .salida{ font-weight: 400; font-size: 1em; }
 .destino, .hora{font-weight: 400; padding-top: 0px; font-size: .8em; color: #8c8c8c;}
 /*#vuelo{color: #866114; }*/
@@ -801,7 +801,7 @@ select {
     text-align: center;
     text-decoration: none;
     margin: 0 auto;
-    width: min-content;
+    width: 100%;
     white-space: nowrap;
 }
 

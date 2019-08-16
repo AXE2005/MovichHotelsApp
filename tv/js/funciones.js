@@ -159,7 +159,7 @@ function print_vuelos()
 	}else{*/
 
 	
-						$.get("http://"+registro+"/servicios/vuelos.php",{nombre: control_name_vuelos}, vuelosres, "jsonp");
+						$.get("http://186.116.1.117/servicios/vuelos.php",{nombre: control_name_vuelos}, vuelosres, "jsonp");
  function vuelosres(respuesta){
 	 
 	 console.log("parseo respuesta vuelos solos: " + respuesta);
@@ -221,19 +221,23 @@ var control_room = localStorage.getItem("mem_room");
 	var registro = localStorage.getItem("mem_registro");
 console.log("pido cuenta datos: " +control_reserva +" hab: "+ control_room);
 
-						$.get("http://"+registro+"/servicios/cuenta.php",{reserva: control_reserva,room: control_room}, cuentares, "jsonp");
+						$.get("http://186.116.1.117/servicios/cuenta.php",{reserva: control_reserva,room: control_room}, cuentares, "jsonp");
  function cuentares(respuesta){
 	 html ='';
 	 var totalc = 0;
-	 html +='<div class="introForm" style=" allign:center; width: 90%;"><p>Estado de cuenta para reserva #'+control_reserva+':</p><br></div>';
+	 html +='<div class="col-md-12">Estado de cuenta para reserva #'+control_reserva+':</div>';
 	 $.each(respuesta, function() {
-     html += '<div><span>'+this['cargo']+'</span><span class="price">'+this['precio']+'</span></div>';
+	 html += '<div class="row border-bottom"> <div class="col-md-7">'+this['cargo']+'</div> <div class="price col-md-5 float-right">$'+this['precio']+'</div> </div>';
 	 var totaltempnum = this['precio'].replace(/\D/g, '');
 	 var totaltempint = parseInt(totaltempnum);
  	 var totalc = totalc + totaltempint;
 	 });
-	 html += '<div><span>Total: </span><span class="price">'+totalc+'</span></div>';
-	 html += '<div class="account-summary text-right text-white"><h4 class="card-title text-yellow ">IMPORTANTE*</h1><br>Estos valores no incluyen cargos por alojamiento, <br>los valores incluyen impoconsumo e iva.</div>';
+	 if (totalc > 0){
+	 	html += '<div class="row total"> <div class="col-md-7 text-shadow-large"><strong>Total:</strong></div> <div class="price col-md-5 float-right">$'+totalc+'</div> </div>';
+	}else{
+		html += '<br><div class="col-md-12 text-center">Actualmente sin cargos que mostrar.</div>';
+	}
+
 	 $("#cuenta").html(html);
 	 $.hideLoading();
 	 

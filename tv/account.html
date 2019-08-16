@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head profile="http://gmpg.org/xfn/11">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="format-detection" content="telephone=no" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +46,7 @@
 </style>
 </head>
 
-<body onLoad="">
+<body onLoad="print_cuenta()">
 	<!-- HEADER -->
 
 
@@ -93,27 +92,10 @@
 						<h3 class="section-title mb-5">
 							Cargos a la habitación
 						</h3>
-						<div>
+						<div id="cuenta">
 							<div class="row border-bottom">
-								<div class="col-md-7">Restaurante</div>
-								<div class="price col-md-5 float-right">$50.000</div>
-							</div>
-							<div class="row border-bottom">
-								<div class="col-md-7">Bar Chispas </div>
-								<div class="price col-md-5 float-right">$120.000</div>
-							</div>
-                            <div class="row border-bottom">
-								<div class="col-md-7">Mini-Bar</div>
-								<div class="price col-md-5 float-right">$15.000</div>
-							</div>
-                            <div class="row border-bottom">
-								<div class="col-md-7">Llamada USA</div>
-								<div class="price col-md-5 float-right">$1.200</div>
-							</div>
-							 <div class="row total">
-								<div class="col-md-7 text-shadow-large"><strong>Total:</strong></div>
-								<div class="price col-md-5 float-right">$186.200</div>
-							</div>
+								<div class="col-md-12">Consultando estado de cuenta...</div>
+							</div>							
 						</div>
 						
 						
@@ -123,8 +105,8 @@
     
         <div id="footer-menu" class="footer-menu-4-icons footer-menu-style" >
             <a href="../hoteles.html" class="active-nav"><i class="fa fa-info"></i><span>Nuestros Hoteles</span></a>
-            <a href="https://bookings.movichhotels.com/search-hotels"><i class="fa fa-calendar"></i><span>Reserve Aqui</span></a>
-            <a href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa fa-phone"></i><span>Contáctenos</span></a>
+            <a href="https://bookings.movichhotels.com/search-hotels" onclick="abrir_loader()"><i class="fa fa-calendar"></i><span>Reserve Aqui</span></a>
+            <a href="https://www.movichhotels.com/esp/Pages/contacto.aspx" onclick="abrir_loader()"><i class="fa fa-phone"></i><span>Contáctenos</span></a>
             <a href="../huesped.html"><i class="fa fa-bed"></i><span>Log In Huésped</span></a>
             <div class="clear"></div>
         </div>
