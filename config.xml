@@ -13,10 +13,10 @@ Powerfull Guest Tools for hospitality services.
 </description>
 
  <author href="http://wifienter.com" email="alejandro.c@wifienter.net">
-Wifientertainment SAS - By Alejandro Osorio 2015-2018
+Wifientertainment SAS - By Alejandro Osorio 2015-2019
 </author>
 
-   <icon src="icon.png" />
+<icon src="icon.png" />
    
 <platform name="android">
 <preference name="SplashMaintainAspectRatio" value="true"/>
