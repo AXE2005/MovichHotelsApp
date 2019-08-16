@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="format-detection" content="telephone=no" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 <meta name="Description" content="DOMLauncher and DOMods, custom HTML5 Android Launcher.">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="icon" href="../favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" href="file:///android_asset/www/tv/css/bootstrap.min.css">
-	<link rel="stylesheet" href="file:///android_asset/www/tv/js/loading.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/loading.min.css">
     
-    <link rel="stylesheet" href="file:///android_asset/www/tv/css/styles.css">
-	<link rel="stylesheet" href="file:///android_asset/www/tv/css/stylesv2.css?v=1">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/stylesv2.css?v=1">
     
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
 	<link rel="stylesheet" type="text/css" href="../fonts/css/fontawesome-all.min.css">
@@ -20,9 +19,12 @@
 
 	<title>Cuenta</title>
 
-	<script src="file:///android_asset/www/tv/js/jquery-3.3.1.min.js"></script> 
-	<script src="file:///android_asset/www/tv/js/bootstrap.min.js"></script> 
-	<script src="file:///android_asset/www/tv/js/jquery.loading.min.js"></script> 
+	<script src="js/jquery-3.3.1.min.js"></script> 
+	<script src="js/bootstrap.min.js"></script> 
+	<script src="js/jquery.loading.min.js"></script> 
+	<script type="text/javascript" src="../scripts/plugins.js"></script>
+	<script type="text/javascript" src="../scripts/custom.js"></script>
+	<script src="js/funciones.js"></script>
 
 <style>
 
@@ -46,7 +48,7 @@
 </style>
 </head>
 
-<body onLoad="">
+<body onLoad="print_cuenta()">
 	<!-- HEADER -->
 
 
@@ -120,9 +122,6 @@
 
 
 	</div>
-<script type="text/javascript" src="../scripts/plugins.js"></script>
-<script type="text/javascript" src="../scripts/custom.js"></script>
-<script src="file:///android_asset/www/tv/js/funciones.js"></script>
 <script type="text/javascript">
 	var images = ['bg1.png', 'bg2.png', 'bg3.png', 'bg4.png', 'bg5.png'];
     $('.fondo').css({'background-image': 'url(../imgs/' + images[Math.floor(Math.random() * images.length)] + ')'});
