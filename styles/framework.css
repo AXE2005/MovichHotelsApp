@@ -467,7 +467,12 @@ sup{top: -15px;} sub{bottom: 0px;}
 .border-white{border:solid 1px #FFFFFF!important;}
 .border-light{border-color:rgba(255,255,255,0.05)!important;}
 
-.bg-movich{background-image: linear-gradient(180deg, #000000 0%, #000000e8 100%);}
+.bg-movich{
+background: -moz-linear-gradient(top,  rgba(10,8,8,0.8) 0%, rgba(0,0,0,0.91) 100%);
+background: -webkit-linear-gradient(top,  rgba(10,8,8,0.8) 0%,rgba(0,0,0,0.91) 100%);
+background: linear-gradient(to bottom,  rgba(10,8,8,0.8) 0%,rgba(0,0,0,0.91) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0a0808', endColorstr='#e8000000',GradientType=0 );
+}
 
 .bg-black{background-color:#000000!important;}
 .bg-hover-black:hover{background-color:#000000!important; color:#FFFFFF!important;}
@@ -606,8 +611,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .gradient-brown-dark{background-image: linear-gradient(180deg, #bfaf97 0%, #8e8170 100%);}
 .gradient-night-light{background-image: linear-gradient(180deg, #656D78 0%, #434A54 100%);}
 .gradient-night-dark{background-image: linear-gradient(180deg, #3C3B3D 0%, #323133 100%);}
-.gradiente-menu{background-image: linear-gradient(180deg, #1f1505c9 0%, #000000eb 100%);}
-.gradiente-blanco{background-image: linear-gradient(180deg, #fffffffa 0%, #fbfbfb 100%);}
+.gradiente-menu{/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,0a0a0a+100&1+0,0.78+100 */ background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(10,10,10,0.78) 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(10,10,10,0.78) 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(10,10,10,0.78) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#c70a0a0a',GradientType=0 ); /* IE6-9 */}
+.gradiente-blanco{
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.98) 0%, rgba(251,251,251,1) 100%);
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.98) 0%,rgba(251,251,251,1) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,0.98) 0%,rgba(251,251,251,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faffffff', endColorstr='#fbfbfb',GradientType=0 );
+}
 
 .shadow-small{	box-shadow: 0 0 25px 2px rgba(0,0,0,0.06);}
 .shadow-medium{	box-shadow: 0 0 25px 2px rgba(0,0,0,0.2);}
