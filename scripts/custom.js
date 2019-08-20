@@ -10,16 +10,7 @@ $(document).ready(function(){
             
 		//Demo Purposes.
 		$('a').on('click', function(){var attrs = $(this).attr('href');	if(attrs === '#'){return false;}});
-        var democs = 'gradient-body-1 gradient-body-2 gradient-body-3 gradient-body-4 gradient-body-5 gradient-body-6 gradient-body-7 gradient-body-8 gradient-body-9';
-        $('.democ-1').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-1');});      
-        $('.democ-2').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-2');});      
-        $('.democ-3').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-3');});      
-        $('.democ-4').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-4');});      
-        $('.democ-5').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-5');});      
-        $('.democ-6').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-6');});      
-        $('.democ-7').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-7');});      
-        $('.democ-8').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-8');});      
-        $('.democ-9').on('click', function(){$('.page-bg, .menu-bg').removeClass(democs).addClass('gradient-body-9');});      
+
         
         //FastClick $(function() {FastClick.attach(document.body);});
 
@@ -840,7 +831,7 @@ $(document).ready(function(){
 				},150);
 			}
       	};
-      var smoothState = $('#page-transitions').smoothState(options).data('smoothState');
+      //var smoothState = $('#page-transitions').smoothState(options).data('smoothState');
     });
 	$('body').append('<div class="page-change-preloader preloader-light"><div id="preload-spinner" class="spinner-red"></div></div>');
 });

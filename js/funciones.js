@@ -1,6 +1,7 @@
 //Vamo q vamo papu
 
 
+
 function controlIntro(){
 
 		var intro = localStorage.getItem("mem_intro");
@@ -74,4 +75,10 @@ function huesped(){
 			}
 		
 		}
+	}
+	
+	function ir(donde){
+		
+		window.location.href = donde;
+		
 	}
