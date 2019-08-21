@@ -1,7 +1,6 @@
 //Vamo q vamo papu
 
 
-
 function controlIntro(){
 
 		var intro = localStorage.getItem("mem_intro");
@@ -35,12 +34,12 @@ location.href = "index.html";
 
 function huesped(){
 		
-
 		var room_form = $("#room").val();
 		var nombre_form = $("#nombre").val();
+		var registro = $('#select-beast').val();
+		localStorage.setItem("mem_registro",registro);
 		
-		
-		$.get("http://186.116.1.117/servicios/room.php",{room: room_form, nombre: nombre_form}, tvres, "jsonp");
+		$.get("http://"+registro+"/servicios/room.php",{room: room_form, nombre: nombre_form}, tvres, "jsonp");
  
 		function tvres(respuesta){
 	 
@@ -57,7 +56,6 @@ function huesped(){
 			var llegada = respuesta.llegada;
 			var idioma = respuesta.idioma;
 			
-			
 			localStorage.setItem("mem_contenido", contenido);
 			localStorage.setItem("mem_romm", room);
 			localStorage.setItem("mem_reserva", reserva);
@@ -65,20 +63,19 @@ function huesped(){
 			localStorage.setItem("mem_llegada", llegada);
 			localStorage.setItem("mem_salida", salida);
 			localStorage.setItem("mem_mensajes","[]");
+
 			if (idioma == "es"){localStorage.setItem("mem_lenguaje", idioma)}else{localStorage.setItem("mem_lenguaje", null)};
 
 			$('.menu-header').html(contenido);
 			location.href = "./index_huesped.html";
 			
 			} else {
-			$("#war").click();
+				$("#war").click();
 			}
 		
 		}
 	}
 	
 	function ir(donde){
-		
 		window.location.href = donde;
-		
 	}

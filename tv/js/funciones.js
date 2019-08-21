@@ -1,39 +1,14 @@
 
-
-console.log("abro funciones");
-
-
 function print_vuelos()
 {
 	$.showLoading({name: 'circle-fade',allowHide: true}); 
 //	alert ("inicio vuelos");
 	var control_name_vuelos = localStorage.getItem("nombredb");
 	var registro = localStorage.getItem("mem_registro");
-	/*
-	var control_vueloshtml = localStorage.getItem("mem_vueloshtml");	
-	if(control_vueloshtml){
 
-		var animation="slideInRight";
-  		$("#variableContent").hide();
-		$("#mainContent").hide();
-  		$("#varTitle").html("Salidas de Vuelos");
-
-		$("#varImage").hide();
-		$("#varText").html(control_vueloshtml);
-					
-  		if(!$('#variableContent').is(':visible')){
-  			$("#variableContent").addClass('animated '+animation);
-  			$("#variableContent").show();	       
-            //wait for animation to finish before removing classes
-            window.setTimeout( function(){
-                $("#variableContent").removeClass('animated '+animation);
-            }, 1000);
-        }
-		console.log("Tengo en memoria asi que imprimo ");
-	}else{*/
 
 	
-						$.get("http://186.116.1.117/servicios/vuelos.php",{nombre: control_name_vuelos}, vuelosres, "jsonp");
+						$.get("http://"+registro+"/servicios/vuelos.php",{nombre: control_name_vuelos}, vuelosres, "jsonp");
  function vuelosres(respuesta){
 	 
 	 console.log("parseo respuesta vuelos solos: " + respuesta);
@@ -95,7 +70,7 @@ var control_room = localStorage.getItem("mem_room");
 	var registro = localStorage.getItem("mem_registro");
 console.log("pido cuenta datos: " +control_reserva +" hab: "+ control_room);
 
-						$.get("http://186.116.1.117/servicios/cuenta.php",{reserva: control_reserva,room: control_room}, cuentares, "jsonp");
+						$.get("http://"+registro+"/servicios/cuenta.php",{reserva: control_reserva,room: control_room}, cuentares, "jsonp");
  function cuentares(respuesta){
 	 html ='';
 	 var totalc = 0;
@@ -179,3 +154,17 @@ function ajustes(){
 			if (localStorage.getItem("conf") == "11111") {location.href="./apps.html";} 
 }
 
+function abrir_loader(){
+	$('.page-change-preloader').addClass('show-change-preloader');
+}
+
+function cerrar_loader(){
+	$('.page-change-preloader').removeClass('show-change-preloader');
+}
+
+function salir(){
+
+localStorage.removeItem('mem_reserva');
+location.href = "index.html";
+	
+}

@@ -41,11 +41,11 @@
                 <em class="menu-divider top-10">Navegación</em>
                 <a class="menu-item active-menu" href="index.html"><i class="fa gradient-green-white fa-home"></i>Home</a>
                 <a class="menu-item" href="hoteles.html"><i class="fa gradient-green-white fa-image"></i>Nuestros Hoteles</a>
-                <a class="menu-item" href="https://bookings.movichhotels.com/search-hotels"><i class="fa gradient-green-white fa-file"></i>Reserve Aquí</a>
+                <a class="menu-item" href="https://bookings.movichhotels.com/search-hotels" onclick="abrir_loader()"><i class="fa gradient-green-white fa-file"></i>Reserve Aquí</a>
                 <a class="menu-item" href="huesped.html"><i class="fa gradient-green-white fa-hand-point-right"></i>Log In Huésped</a>
-                <a class="menu-item" href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
-                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
-                <a class="menu-item" href="#"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
+                <a class="menu-item" href="https://www.movichhotels.com/esp/Pages/contacto.aspx" onclick="abrir_loader()"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
+                <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="menu-item" ><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
+                <a class="menu-item" href="https://www.movichhotels.com/esp/Pages/politicas-de-privacidad.aspx" onclick="abrir_loader()"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
             </div>
             <em class="menu-copyright">Copyright <span class="copyright-year"></span> Movich. Todos los derechos Reservados</em>
         </div>
@@ -74,24 +74,24 @@
                         		<select id="select-beast" type="text" placeholder="Seleccione o Escriba el Nombre de Su Hotel" value=""  name="hotel" required>
 									<optgroup label="Bogota">
 									<option value="186.116.1.117" selected>Movich Chico 97</option>
-                                    <option value="186.16.3.117">Movich Buró 26</option>
+                                    <option value="186.115.218.211">Movich Buró 26</option>
 									</optgroup>
-									<optgroup label="Cartagena">
-									<option value="186.16.2.117">Movich Cartagena de Indias</option>
+									<!--<optgroup label="Cartagena">
+									<option value="186.116.1.117">Movich Cartagena de Indias</option>
 									</optgroup>
 									<optgroup label="Medellin">
-									<option value="186.16.1.117">Intercontinental Medellín</option>
-                                    <option value="185.41.45.49">Movich Las Lomas</option>
-									</optgroup>
+									<option value="186.116.1.117">Intercontinental Medellín</option>
+                                    <option value="186.116.1.117">Movich Las Lomas</option>
+									</optgroup>-->
 									<optgroup label="Pereira">
-									<option value="16.116.1.117">Movich Pereira</option>
+									<option value="201.217.210.58:5000">Movich Pereira</option>
 									</optgroup>
-                                    <optgroup label="Barranquilla">
-                                    <option value="196.116.1.117">Movich Bur&oacute; 51</option>
+                                    <!--<optgroup label="Barranquilla">
+                                    <option value="186.116.1.117">Movich Bur&oacute; 51</option>
                                     </optgroup>
                                     <optgroup label="Cali">
-                                    <option value="146.116.1.117">Movich Casa del Alférez</option>
-                                    </optgroup>
+                                    <option value="186.116.1.117">Movich Casa del Alférez</option>
+                                    </optgroup>-->
 								</select>
                         </div>
                         <a href="#" onClick="huesped()" class="button button-dark button-full shadow-icon-large button-round button-s uppercase ultrabold">Ingresar</a>
@@ -106,8 +106,8 @@
 				
         <div id="footer-menu" class="footer-menu-4-icons footer-menu-style" >
             <a href="hoteles.html" class="active-nav"><i class="fa fa-info"></i><span>Nuestros Hoteles</span></a>
-            <a href="https://bookings.movichhotels.com/search-hotels"><i class="fa fa-calendar"></i><span>Reserve Aqui</span></a>
-            <a href="https://www.movichhotels.com/esp/Pages/contacto.aspx"><i class="fa fa-phone"></i><span>Contáctenos</span></a>
+            <a href="https://bookings.movichhotels.com/search-hotels" onclick="abrir_loader()"><i class="fa fa-calendar"></i><span>Reserve Aqui</span></a>
+            <a href="https://www.movichhotels.com/esp/Pages/contacto.aspx" onclick="abrir_loader()"><i class="fa fa-phone"></i><span>Contáctenos</span></a>
             <a href="huesped.html"><i class="fa fa-bed"></i><span>Log In Huésped</span></a>
             <div class="clear"></div>
         </div>
@@ -155,6 +155,20 @@
         </div>
     </div>
 
+  <!--idioma-->
+    <div id="menu-share-thumbs" data-menu-height="250" class="menu menu-box-bottom bg-white">
+        <h1 class="center-text top-20 bottom-0 uppercase ultrabold">Idiomas</h1>
+        <p class="color-black center-text font-12 opacity-50 top-0">Escoge el idioma que prefieras para traducir la app:</p>
+        <div class="share-icons">
+            <a href="#" class="close-menu" onClick="traducir('es')"><img src="tv/imgs/es.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('en')"><img src="tv/imgs/en.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('fr')"><img src="tv/imgs/fr.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('pt')"><img src="tv/imgs/pt.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('hi')"><img src="tv/imgs/hi.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('zh-CN')"><img src="tv/imgs/ch.png" width="60px"></a>
+            <div id="google_translate_element" style="display:none !important"></div>
+        </div>
+    </div>
 
     
 
@@ -163,7 +177,7 @@
 <script type="text/javascript" src="js/funciones.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/selectize.js"></script>
 <script type="text/javascript">
     var deviceReady = function(){
@@ -175,4 +189,40 @@
 	$('#select-beast').selectize({ create: true, sortField: 'text' });
 	//setTimeout(function(){ $('.selectized').hide(); }, 500);
 </script>
+
+<script type="text/javascript">
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "es",includedLanguages: "es,pt,fr,zh-CN,en,hi"}, 'google_translate_element');
+}
+
+function traducir(lenguaje) {
+    abrir_loader();
+  var language = lenguaje;
+  localStorage.setItem("mem_lenguaje",language);
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+  cerrar_loader();
+  $(".skiptranslate").hide();
+}
+
+</script>
+
+<script type="text/javascript">
+function autoTranslate(){
+    var langu = localStorage.getItem("mem_lenguaje","");
+    if (langu != ""){traducir(langu)};
+    $(".skiptranslate").hide();
+}
+
+setTimeout(autoTranslate,500);
+</script>
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
