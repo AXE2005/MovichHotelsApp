@@ -168,3 +168,5 @@ localStorage.removeItem('mem_reserva');
 location.href = "index.html";
 	
 }
+
+setTimeout(cerrar_loader, 1000);

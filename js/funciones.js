@@ -79,3 +79,5 @@ function huesped(){
 	function ir(donde){
 		window.location.href = donde;
 	}
+
+	setTimeout(cerrar_loader, 1000);
