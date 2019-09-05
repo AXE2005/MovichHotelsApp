@@ -36,11 +36,11 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2019
 <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png"/>
 
 </platform>
-
-  <preference name="android-minSdkVersion" value="19" />
+<preference name="loadUrlTimeoutValue" value="700000"/>
+<preference name="android-minSdkVersion" value="19" />
 
 <preference name='phonegap-version' value='cli-6.5.0' />
-   <preference name="target-device" value="universal" />
+<preference name="target-device" value="universal" />
 
 <plugin name="cordova-plugin-whitelist" source="npm" />
 

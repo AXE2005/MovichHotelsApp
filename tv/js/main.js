@@ -17,7 +17,7 @@ $.ajaxSetup({ cache: false });
         });
 
 } */
- //var = "http://186.116.1.117/servicios/room.php"
+ //var = "http://"+registro+"/servicios/room.php"
 
  //var tech = GetURLParameter('room');
 
@@ -26,12 +26,12 @@ $(document).ready(function(){
 });
 
 function rooms(room){
-
+var registro = localStorage.getItem("mem_registro");
 $.ajaxSetup({ cache: false });
 
         console.log("ROOM "+room);
 
-        var url = "http://186.116.1.117/servicios/room.php?room="+room;
+        var url = "http://"+registro+"/servicios/room.php?room="+room;
 
         console.log("URL "+url);
  
@@ -53,9 +53,9 @@ $.ajaxSetup({ cache: false });
 
 
 function categorias(room){
-
+var registro = localStorage.getItem("mem_registro");
 $.ajaxSetup({ cache: false });
-        $.getJSON("http://186.116.1.117/backend/categorias_read.php", function(data){ 
+        $.getJSON("http://"+registro+"/backend/categorias_read.php", function(data){ 
 
            //rooms(room);
            
@@ -76,7 +76,7 @@ $.ajaxSetup({ cache: false });
               outputcategoriasDesc+=  '<div class="collapse fade menux" id="cat'+val.id+'" aria-labelledby="variable_button1" data-parent="#variable_infoParent">'+
                     '<div id="contentCat'+val.id+'" class="navbar-nav w-100 font-12">'+
                  '</div>'+
-                '</div><br>';
+                '</div>';
 
               productos(val.id);
               
@@ -96,11 +96,11 @@ $.ajaxSetup({ cache: false });
 function hidemenux(){
 	$(".menux").collapse('hide');
 	}
-
+var registro = localStorage.getItem("mem_registro");
 function productos(id){
         $.ajaxSetup({ cache: false });
  
-        $.getJSON("http://186.116.1.117/backend/productos_read.php?id_categoria="+id, function(data){ 
+        $.getJSON("http://"+registro+"/backend/productos_read.php?id_categoria="+id, function(data){ 
            
             var productosResources = $('#contentCat'+id); 
             var arr="";
@@ -380,8 +380,8 @@ function sendPedido(pago){
 	if(localStorage.getItem('productos')!==null){
     products = JSON.parse(localStorage.getItem('productos'));
 	}
-
-    var url = "http://186.116.1.117/controller/crear_orden.php";
+var registro = localStorage.getItem("mem_registro");
+    var url = "http://"+registro+"/controller/crear_orden.php";
      console.log("URL CUENTA "+url);
      jsonString = JSON.stringify(products);
      console.log(jsonString);
