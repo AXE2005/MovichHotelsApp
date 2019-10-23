@@ -18,7 +18,14 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2019
 
 <icon src="icon.png" />
 
+<plugin name="cordova-plugin-statusbar" />
+<preference name="StatusBarOverlaysWebView" value="false" />
+
 <platform name="ios">
+
+<preference name="StatusBarStyle" value="lightcontent" />
+<preference name="StatusBarBackgroundColor" value="#2b2c2d" />
+
 <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
 <icon src="res/icon/ios/icon-small.png" width="29" height="29"/>
 <icon src="res/icon/ios/icon-small@2x.png" width="58" height="58"/>
@@ -92,6 +99,7 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2019
 <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png"/>
 
 </platform>
+<preference name="DisallowOverscroll" value="true" />
 <preference name="loadUrlTimeoutValue" value="700000"/>
 <preference name="android-minSdkVersion" value="19" />
 
