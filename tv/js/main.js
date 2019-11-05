@@ -180,7 +180,7 @@ function agregarx(btn,id){
 }
 
 
-var products = [];
+//var products = [];
 var cart = [];
 
 function addProduct() {
@@ -216,6 +216,12 @@ function addProduct() {
   // **************Revisar esto de reserva. Se comento porque esta generando errores de javascript******************************
   //newProduct.reserva = localStorage.getItem('reserva');
   //***************************************************************
+
+  var products=[];
+    if(JSON.parse(localStorage.getItem('productos'))!=""){
+      products = JSON.parse(localStorage.getItem('productos'));
+  }
+
 
   products.push(newProduct);
 
@@ -370,7 +376,7 @@ function confirmarPedido(){
 }
 
 function cancelarPedido(){
-localStorage.setItem('productos',"[]");
+localStorage.setItem('productos','[]');
 location.href = "room_service.html";
 }
 

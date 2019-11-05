@@ -74,7 +74,7 @@ console.log("pido cuenta datos: " +control_reserva +" hab: "+ control_room);
  function cuentares(respuesta){
 	 html ='';
 	 var totalc = 0;
-	 html +='<div class="col-md-12">Estado de cuenta para reserva #'+control_reserva+':</div>';
+	 html +='<div class="col-md-12">Estado de cuenta para reserva  # '+control_reserva+':</div>';
 	 $.each(respuesta, function() {
 	 html += '<div class="row border-bottom"> <div class="col-md-7">'+this['cargo']+'</div> <div class="price col-md-5 float-right">$'+this['precio']+'</div> </div>';
 	 var totaltempnum = this['precio'].replace(/\D/g, '');
@@ -84,7 +84,7 @@ console.log("pido cuenta datos: " +control_reserva +" hab: "+ control_room);
 	 if (totalc > 0){
 	 	html += '<div class="row total"> <div class="col-md-7 text-shadow-large"><strong>Total:</strong></div> <div class="price col-md-5 float-right">$'+totalc+'</div> </div>';
 	}else{
-		html += '<br><div class="col-md-12 text-center">Actualmente sin cargos que mostrar.</div>';
+		html += '<br><div class="col-md-12 text-center"></div>';
 	}
 
 	 $("#cuenta").html(html);
