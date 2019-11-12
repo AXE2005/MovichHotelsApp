@@ -5857,7 +5857,7 @@ input[type="range"]::-webkit-slider-thumb:after{
 	height: 40px;
 	width: 40px;
 	position: absolute;
-	box-shadow:inset #5D9CEC 0 0 0 2px;
+	box-shadow:inset #bc9041 0 0 0 2px;
 
 }
 @keyframes preload-spin1 {25% {transform: rotate(0deg)}  100% {transform: rotate(185deg)}}

@@ -440,4 +440,12 @@ function showMessage(message,autoclose){
   }
 }
 
+function atrasRoom() {
+  $('#segunda').hide('slow');
+  $('#primera').show('slow');
+  $('#futer').show('slow');
+  $("#logoico").show();
+  $("#atrasico").hide();
+}
+
  

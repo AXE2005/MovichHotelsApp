@@ -223,7 +223,7 @@ p {
 <div class="header header-light header-logo-app">
 		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
 		<a id="logoico" data-menu-type="menu-box-full" href="../index_huesped.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="../images/logo.png"></a>
-        <a id="atrasico" data-menu-type="menu-box-full" style="display:none" href="#" class="back-button header-icon header-icon-m" onClick="$('#logoico').show();$('#atrasico').hide();"><i class="fas fa-chevron-circle-left"></i></a>
+        <a id="atrasico" data-menu-type="menu-box-full" style="display:none" href="#" class="header-icon header-icon-m" onClick="atrasRoom()"><i class="fas fa-chevron-circle-left"></i></a>
     </div>
 
 	<div id="menu-1" class="menu menu-sidebar-left menu-settings">
@@ -547,6 +547,14 @@ function myFunction() {
 		console.log("no scroleo");
     }
 }
+
+	var products=[];
+	    if(JSON.parse(localStorage.getItem('productos'))!=""){
+	      products = JSON.parse(localStorage.getItem('productos'));
+	}
+
+	$("#carrito-count").html(products.length);
+
 </script>
 
 <script type="text/javascript">
