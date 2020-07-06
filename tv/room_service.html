@@ -218,6 +218,14 @@ p {
 	padding-bottom: 20px;
 }
 
+.noboton {
+	margin-bottom: 0px !important;
+}
+
+.nopadin{
+	padding: 0 !important;
+}
+
 </style>
 	
 </head>
@@ -245,7 +253,7 @@ p {
                 <a class="menu-item" href="#" onclick="salir()"><i class="fa gradient-green-white fa-hand-point-right"></i>Salir</a>
                 <a class="menu-item" href="https://apps.merakitic.com:4433/chat.html"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
                 <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="menu-item" ><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
-                <a class="menu-item" href="https://www.movichhotels.com/es/aviso-legal/" onclick="abrir_loader()"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
+                <a class="menu-item" href="tos.html" onclick="abrir_loader()"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
             </div>
             <em class="menu-copyright">Copyright <span class="copyright-year"></span> Movich Hotels. Todos los derechos Reservados</em>
         </div>
@@ -260,7 +268,7 @@ p {
                 
                 <img class="card-img-top" src="imgs/restaurante.png" alt="Restaurante" style="padding-top:5px;">
 
-                <h4 class=" mb-3 mx-0" style="padding-top:10px;">
+                <h4 class=" mb-3 mx-0 noboton" style="padding-top:10px;">
 						Restaurante ÉB​ANO
 					</h4>
                 
@@ -268,9 +276,8 @@ p {
 
     <div id="topMenu">
         <div id="box">
-            <div class="scroller scroller-left"><i class="fas fa-angle-left font" style="font-size: 1.3em;"></i></div>
-            <div class="scroller scroller-right"><i class="fas fa-angle-right" style="font-size: 1.3em;"></i></div>
-            <div id="variable_infoParent" class="wrapper">
+            <h6 style="text-align: center;color: darkgrey;"><- Desplaza a derecha o izquierda para más categorias -></h6>
+            <div id="variable_infoParent" class="wrapper nopadin">
                 <div id="categorias" class="list">
                 </div>
             </div>

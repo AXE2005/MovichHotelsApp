@@ -76,7 +76,7 @@ console.log("pido cuenta datos: " +control_reserva +" hab: "+ control_room);
 	 var totalc = 0;
 	 html +='<div class="col-md-12">Estado de cuenta para reserva  # '+control_reserva+':</div>';
 	 $.each(respuesta, function() {
-	 html += '<div class="row border-bottom"> <div class="col-md-7">'+this['cargo']+'</div> <div class="price col-md-5 float-right">$'+this['precio']+'</div> </div>';
+	 html += '<div class="row border-bottom"> <div class="col-md-7">'+this['cargo']+'</div> <div class="price col-md-5 float-right">'+this['precio']+'</div> </div>';
 	 var totaltempnum = this['precio'].replace(/\D/g, '');
 	 var totaltempint = parseInt(totaltempnum);
  	 var totalc = totalc + totaltempint;
