@@ -218,7 +218,7 @@ function addProduct() {
   //***************************************************************
 
   var products=[];
-    if(JSON.parse(localStorage.getItem('productos'))!=""){
+    if(JSON.parse(localStorage.getItem('productos'))!=null){
       products = JSON.parse(localStorage.getItem('productos'));
   }
 

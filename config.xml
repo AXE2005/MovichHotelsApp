@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
         xmlns:gap	= "http://phonegap.com/ns/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android"
         id		   = "com.movichhotels.smarthotel"
-        version 	= "1.0.2">
+        version 	= "1.0.3">
 
    <name>Movich Hotels</name>
 
@@ -130,8 +131,12 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2019
 <access launch-external="yes" origin="mailto:*" />
 <access launch-external="yes" origin="sms:*" />
 <access launch-external="yes" origin="market:*" />
-<access origin="*" />
-<allow-navigation href="*" />
 <access origin="http://*/*" />
+
+<access origin="*" />
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+        <application android:usesCleartextTraffic="true" />
+    </edit-config>
+<allow-navigation href="*" />
 
 </widget>
