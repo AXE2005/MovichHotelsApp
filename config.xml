@@ -109,6 +109,7 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2019
 <preference name="target-device" value="universal" />
 
 <plugin name="cordova-plugin-whitelist" source="npm" />
+<plugin name="cordova-plugin-cleartext" spec="*" />
 
 <allow-navigation href="*" />
 <allow-navigation href="http://*/*" />
