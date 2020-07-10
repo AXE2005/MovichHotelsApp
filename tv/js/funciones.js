@@ -8,7 +8,7 @@ function print_vuelos()
 
 
 	
-						$.get("http://"+registro+"/servicios/vuelos.php",{nombre: control_name_vuelos}, vuelosres, "jsonp");
+						$.get(registro+"/servicios/vuelos.php",{nombre: control_name_vuelos}, vuelosres, "jsonp");
  function vuelosres(respuesta){
 	 
 	 console.log("parseo respuesta vuelos solos: " + respuesta);
@@ -70,7 +70,7 @@ var control_room = localStorage.getItem("mem_room");
 	var registro = localStorage.getItem("mem_registro");
 console.log("pido cuenta datos: " +control_reserva +" hab: "+ control_room);
 
-						$.get("http://"+registro+"/servicios/cuenta.php",{reserva: control_reserva,room: control_room}, cuentares, "jsonp");
+						$.get(registro+"/servicios/cuenta.php",{reserva: control_reserva,room: control_room}, cuentares, "jsonp");
  function cuentares(respuesta){
 	 html ='';
 	 var totalc = 0;
@@ -104,15 +104,15 @@ function goservicios(servicio) {
   
   console.log("opcion "+opcion+" com "+com);
   if (servicio == "Ama de llaves") {
-  $.get("http://"+registro+"/controller/crear_mucama.php",{opcion: opcion,com: com,room: control_room, nombre: control_nombre}, res, "jsonp");
+  $.get(registro+"/controller/crear_mucama.php",{opcion: opcion,com: com,room: control_room, nombre: control_nombre}, res, "jsonp");
 	function res(respuesta){var cod = respuesta.codigosolicitud;console.log(cod);};
   }
   if (servicio == "Conserjeria") {
-  $.get("http://"+registro+"/controller/crear_conserje.php",{opcion: opcion,com: com,room: control_room, nombre: control_nombre}, res, "jsonp");
+  $.get(registro+"/controller/crear_conserje.php",{opcion: opcion,com: com,room: control_room, nombre: control_nombre}, res, "jsonp");
 	function res(respuesta){var cod = respuesta.codigosolicitud;console.log(cod);};
   }
   if (servicio == "Mantenimiento") {
-  $.get("http://"+registro+"/controller/crear_mantenimiento.php",{opcion: opcion,com: com,room: control_room, nombre: control_nombre}, res, "jsonp");
+  $.get(registro+"/controller/crear_mantenimiento.php",{opcion: opcion,com: com,room: control_room, nombre: control_nombre}, res, "jsonp");
 	function res(respuesta){var cod = respuesta.codigosolicitud;console.log(cod);};
   }
   

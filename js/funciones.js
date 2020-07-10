@@ -39,7 +39,7 @@ function huesped(){
 		var registro = $('#select-beast').val();
 		localStorage.setItem("mem_registro",registro);
 		
-		$.get("http://"+registro+"/servicios/room.php",{room: room_form, nombre: nombre_form}, tvres, "jsonp");
+		$.get(registro+"/servicios/room.php",{room: room_form, nombre: nombre_form}, tvres, "jsonp");
  
 		function tvres(respuesta){
 	 
