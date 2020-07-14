@@ -3,7 +3,7 @@
         xmlns:gap	= "http://phonegap.com/ns/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
         id		   = "com.movichhotels.smarthotel"
-        version 	= "1.0.3">
+        version 	= "1.0.0">
 
    <name>Movich Hotels</name>
 
@@ -14,7 +14,7 @@ Powerfull Guest Tools for hospitality services.
 </description>
 
  <author href="http://wifienter.com" email="alejandro.c@wifienter.net">
-Wifientertainment SAS - By Alejandro Osorio 2015-2019
+Wifientertainment SAS - By Alejandro Osorio 2015-2020
 </author>
 
 <icon src="icon.png" />
@@ -110,6 +110,7 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2019
 
 <plugin name="cordova-plugin-whitelist" source="npm" />
 <plugin name="cordova-plugin-cleartext" source="npm"/>
+<plugin name="cordova-plugin-inappbrowser" source="npm"/>
 
 <allow-navigation href="*" />
 <allow-navigation href="http://*/*" />
