@@ -12,6 +12,7 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2020
     <icon src="icon.png" />
     <plugin name="cordova-plugin-statusbar" />
     <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="WKWebViewOnly" value="true" />
     <platform name="ios">
         <preference name="StatusBarStyle" value="lightcontent" />
         <preference name="StatusBarBackgroundColor" value="#2b2c2d" />        
@@ -91,7 +92,6 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2020
     <preference name="android-targetSdkVersion" value="28" />
     <preference name="target-device" value="universal" />
     <plugin name="cordova-plugin-whitelist" source="npm" />
-    <plugin name="cordova-plugin-cleartext" source="npm" />
     <plugin name="cordova-plugin-inappbrowser" source="npm" />
     <allow-navigation href="*" />
     <allow-navigation href="http://*/*" />
@@ -116,8 +116,5 @@ Wifientertainment SAS - By Alejandro Osorio 2015-2020
     <access launch-external="yes" origin="market:*" />
     <access origin="http://*/*" />
     <access origin="*" />
-    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:usesCleartextTraffic="true" />
-    </edit-config>
     <allow-navigation href="*" />
 </widget>
