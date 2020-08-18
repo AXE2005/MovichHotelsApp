@@ -1,0 +1,24 @@
+{
+  "name": "movichhotelsapp",
+  "version": "1.0.0",
+  "description": "Aplicación móvil complementaría para los clientes de hoteles movich",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AXE2005/MovichHotelsApp.git"
+  },
+  "keywords": [
+    "movich",
+    "app",
+    "hotels"
+  ],
+  "author": "Alejandro Camargo Osorio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AXE2005/MovichHotelsApp/issues"
+  },
+  "homepage": "https://github.com/AXE2005/MovichHotelsApp#readme"
+}

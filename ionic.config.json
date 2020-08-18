@@ -1,0 +1,7 @@
+{
+    "name": "movich",
+    "type": "custom",
+    "integrations": {
+      "cordova": {}
+    }
+  }
