@@ -8,7 +8,7 @@ Powerfull Guest Tools for hospitality services.
     <author email="alejandro.c@wifienter.net" href="http://wifienter.com">
 Wifientertainment SAS - By Alejandro Osorio 2015-2020
 </author>
-    <preference name="phonegap-version" value="cli-9.0.0" />
+    
     <icon src="icon.png" />
     <plugin name="cordova-plugin-statusbar" />
     <preference name="StatusBarOverlaysWebView" value="false" />
