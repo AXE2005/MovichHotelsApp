@@ -8,14 +8,13 @@ Powerfull Guest Tools for hospitality services.
     <author email="alejandro.c@wifienter.net" href="http://wifienter.com">
 Wifientertainment SAS - By Alejandro Osorio 2015-2020
 </author>
-    
     <icon src="icon.png" />
     <plugin name="cordova-plugin-statusbar" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="WKWebViewOnly" value="true" />
     <platform name="ios">
         <preference name="StatusBarStyle" value="lightcontent" />
-        <preference name="StatusBarBackgroundColor" value="#2b2c2d" />        
+        <preference name="StatusBarBackgroundColor" value="#2b2c2d" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
         <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
         <icon height="20" src="resources/ios/icon/icon-20.png" width="20" />
