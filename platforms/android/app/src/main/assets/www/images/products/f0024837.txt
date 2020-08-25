@@ -1,0 +1,9 @@
+date\updatebr.inf"
+update\eula.txt
+update\branches.inf
+
+[SetupFiles.SP2QFE]
+"update\update_SP2QFE.inf"
+
+[SetupFiles.SP2GDR]
+"update\update_SP2GDR.inf"

@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.movichhotels.smarthotel"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.movichhotels.smarthotel"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.movichhotels.smarthotel"
+    }
+  },
+  "dependent_plugins": {}
+}
