@@ -6,10 +6,10 @@ function controlIntro(){
 		var intro = localStorage.getItem("mem_intro");
 		var huesped = localStorage.getItem("mem_reserva");
 		
-		if (intro == null){
+		/*if (intro == null){
 			localStorage.setItem("mem_intro","bienvenido");
 			location.href = "./intro.html";
-		}
+		}*/
 		
 		if (huesped != null){
 			location.href = "./index_huesped.html";
