@@ -2,7 +2,7 @@
 
 platform :ios, '11.0'
 
-target 'C:\Users\aleja\Documents\MovichHotelsApp\platforms\ios\Movich Hotels' do
-	project 'C:\Users\aleja\Documents\MovichHotelsApp\platforms\ios\Movich Hotels.xcodeproj'
+target 'Movich Hotels' do
+	project 'Movich Hotels.xcodeproj'
 
 end

@@ -9,6 +9,10 @@
         "parents": {
           "/*": [
             {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVWKInAppBrowser\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -19,10 +23,6 @@
             {
               "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVWKInAppBrowser\" /><param name=\"onload\" value=\"true\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -30,26 +30,18 @@
     }
   },
   "installed_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.movichhotels.smarthotel"
+    },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.movichhotels.smarthotel"
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.movichhotels.smarthotel"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.movichhotels.smarthotel"
     }
   },
   "dependent_plugins": {},
   "modules": [
-    {
-      "id": "cordova-plugin-statusbar.statusbar",
-      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-      "pluginId": "cordova-plugin-statusbar",
-      "clobbers": [
-        "window.StatusBar"
-      ]
-    },
     {
       "id": "cordova-plugin-inappbrowser.inappbrowser",
       "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
@@ -57,11 +49,19 @@
       "clobbers": [
         "cordova.InAppBrowser.open"
       ]
+    },
+    {
+      "id": "cordova-plugin-statusbar.statusbar",
+      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+      "pluginId": "cordova-plugin-statusbar",
+      "clobbers": [
+        "window.StatusBar"
+      ]
     }
   ],
   "plugin_metadata": {
+    "cordova-plugin-inappbrowser": "4.0.0",
     "cordova-plugin-statusbar": "2.4.3",
-    "cordova-plugin-whitelist": "1.3.4",
-    "cordova-plugin-inappbrowser": "4.0.0"
+    "cordova-plugin-whitelist": "1.3.4"
   }
 }

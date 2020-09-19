@@ -24,8 +24,7 @@
   "homepage": "https://github.com/AXE2005/MovichHotelsApp#readme",
   "dependencies": {
     "@ionic/cli": "^6.11.1",
-    "cordova-android": "9.0.0",
-    "cordova-ios": "6.1.0"
+    "cordova-android": "9.0.0"
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.2.4",
@@ -42,8 +41,8 @@
     "ionic:build": "vue-cli-service build",
     "ionic:serve": "vue-cli-service serve",
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
