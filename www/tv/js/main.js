@@ -17,7 +17,7 @@ $.ajaxSetup({ cache: false });
         });
 
 } */
- //var = "http://"+registro+"/servicios/room.php"
+ //var = registro+"/servicios/room.php"
 
  //var tech = GetURLParameter('room');
 
@@ -31,7 +31,7 @@ $.ajaxSetup({ cache: false });
 
         console.log("ROOM "+room);
 
-        var url = "http://"+registro+"/servicios/room.php?room="+room;
+        var url = registro+"/servicios/room.php?room="+room;
 
         console.log("URL "+url);
  
@@ -55,7 +55,7 @@ $.ajaxSetup({ cache: false });
 function categorias(room){
 var registro = localStorage.getItem("mem_registro");
 $.ajaxSetup({ cache: false });
-        $.getJSON("http://"+registro+"/backend/categorias_read.php", function(data){ 
+        $.getJSON(registro+"/backend/categorias_read.php", function(data){ 
 
            //rooms(room);
            
@@ -100,7 +100,7 @@ var registro = localStorage.getItem("mem_registro");
 function productos(id){
         $.ajaxSetup({ cache: false });
  
-        $.getJSON("http://"+registro+"/backend/productos_read.php?id_categoria="+id, function(data){ 
+        $.getJSON(registro+"/backend/productos_read.php?id_categoria="+id, function(data){ 
            
             var productosResources = $('#contentCat'+id); 
             var arr="";
@@ -387,7 +387,7 @@ function sendPedido(pago){
     products = JSON.parse(localStorage.getItem('productos'));
 	}
 var registro = localStorage.getItem("mem_registro");
-    var url = "http://"+registro+"/controller/crear_orden.php";
+    var url = registro+"/controller/crear_orden.php";
      console.log("URL CUENTA "+url);
      jsonString = JSON.stringify(products);
      console.log(jsonString);
