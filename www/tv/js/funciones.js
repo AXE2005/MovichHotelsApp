@@ -165,7 +165,7 @@ function cerrar_loader(){
 function salir(){
 
 localStorage.removeItem('mem_reserva');
-location.href = "index.html";
+location.href = "../index.html";
 	
 }
 

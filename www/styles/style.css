@@ -10,6 +10,11 @@
 	color:#FFFFFF;
 }
 
+.fa-bars {
+	font-size: 200% !important;
+}
+
+
 .footer .footer-logo{
 	background-size:120px 28px;
 	width:100%;
