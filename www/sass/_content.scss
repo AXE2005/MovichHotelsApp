@@ -1,0 +1,345 @@
+.content {
+	@extend .container;
+	&__title {
+		@extend .flex-x;
+
+		h2 {
+			color: $color-titulos;
+			font-size: $fs-big;
+			font-weight: 100;
+			flex-grow: 2;
+			margin-left: size($space-xs);
+		}
+		span {
+			font-size: $fs-small;
+			font-weight: 100;
+			display: block;
+			color: $blanco;
+		}
+	}
+
+	.tv {
+		&::before {
+			content: url(../images/tv-icon.svg);
+		}
+	}
+	.lights {
+		&::before {
+			content: url(../images/light-icon.svg);
+		}
+	}
+	.curtains {
+		&::before {
+			content: url(../images/curtain-icon.svg);
+		}
+	}
+	.temp {
+		&::before {
+			content: url(../images/air-icon.svg);
+		}
+	}
+	.sound {
+		&::before {
+			content: url(../images/sound-icon.svg);
+		}
+	}
+
+	&__back {
+		background-color: $blanco;
+		color: $color-primario;
+		border-radius: $border-radius;
+		padding: size($space-small);
+		border: none;
+	}
+
+	&__item {
+		@extend .flex-x;
+		@include regular-button;
+		border-radius: size($space-small);
+		margin: size($space-small) 0;
+		width: 100%;
+		box-sizing: border-box;
+
+		p {
+			font-size: $fs-regular;
+			font-weight: 100;
+			span {
+				font-weight: 500;
+			}
+		}
+
+		&__icon {
+			&::after {
+				content: url(../images/control.svg);
+			}
+		}
+
+		.switch {
+			cursor: pointer;
+			position: relative;
+			display: inline-block;
+			border: $border-yellow;
+			background: transparent;
+			width: size(80);
+			height: size(40);
+			border-radius: size(42);
+			padding: 0;
+
+			&.on {
+				background: $boton-cerradura;
+				.track {
+					transform: translateX(45px);
+				}
+			}
+
+			.track {
+				width: size(30);
+				height: size(30);
+				border-radius: 50%;
+				background: $boton-relleno;
+				transition: all 0.5s ease;
+			}
+		}
+
+		&-arrows {
+			@extend .flex-x;
+			width: size(150);
+
+			.arrow-left {
+				@include control-button-rounded;
+				transform: rotate(-90deg);
+				background-color: transparent;
+
+				&::before {
+					content: url(../images/arrow.svg);
+				}
+
+				&:hover,
+				&:active,
+				&:focus {
+					background: $boton-cerradura;
+
+					&::before {
+						content: url(../images/arrow-black.svg);
+					}
+				}
+			}
+
+			.arrow-right {
+				@include control-button-rounded;
+				transform: rotate(90deg);
+				background-color: transparent;
+
+				&::before {
+					content: url(../images/arrow.svg);
+				}
+
+				&:hover,
+				&:active,
+				&:focus {
+					background: $boton-cerradura;
+
+					&::before {
+						content: url(../images/arrow-black.svg);
+					}
+				}
+			}
+
+			.stop {
+				@include control-button-rounded;
+				@extend .flex-x;
+				transform: rotate(90deg);
+				background-color: transparent;
+				display: flex;
+				justify-content: center;
+
+				&::before {
+					content: "";
+					width: size(15);
+					height: size(15);
+					border-radius: size(2);
+					background-color: $color-titulos;
+				}
+
+				&:hover,
+				&:active,
+				&:focus {
+					background: $boton-cerradura;
+
+					&::before {
+						background-color: black;
+					}
+				}
+			}
+		}
+	}
+
+	.power-button {
+		&::after {
+			content: url(../images/power-light.svg);
+			margin-right: size($space-regular);
+			width: size(40);
+			height: size(40);
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: black;
+			background: $boton-cerradura;
+
+			&::after {
+				content: url(../images/power.svg);
+				width: size(40);
+				height: size(40);
+			}
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: size(50) size(80) size(100) size(80) size(50);
+		grid-template-areas:
+			"power power power power power "
+			"volplus . up . chplus"
+			"vol left ok right ch"
+			"volmin . down . chmin"
+			"mute . . . guide";
+
+		&-power {
+			@extend .flex-x;
+			grid-area: power;
+			background: $boton-controles;
+			border-radius: $border-radius;
+			font-size: $fs-big;
+
+			&::after {
+				content: url(../images/power.svg);
+				width: size(30);
+				height: size(30);
+			}
+		}
+
+		&-volplus {
+			@include control-button;
+			@include control-button-border;
+			@include control-button-top;
+			grid-area: volplus;
+			margin-top: size($space-regular);
+		}
+
+		&-up {
+			@include control-button;
+			@include control-button-rounded;
+			grid-area: up;
+			margin-top: size($space-regular);
+		}
+
+		&-chplus {
+			@include control-button;
+			@include control-button-border;
+			@include control-button-top;
+			grid-area: chplus;
+			margin-top: size($space-regular);
+		}
+
+		&-vol {
+			@include control-button;
+			@include control-button-border;
+			grid-area: vol;
+		}
+
+		&-left {
+			@include control-button;
+			@include control-button-rounded;
+			grid-area: left;
+			transform: rotate(-90deg);
+		}
+
+		&-ok {
+			@include control-button;
+			grid-area: ok;
+			background: $boton-controles;
+			border-radius: 50%;
+			width: size(100);
+			height: size(100);
+			color: $color-primario;
+			margin: auto;
+		}
+
+		&-right {
+			@include control-button;
+			@include control-button-rounded;
+			grid-area: right;
+			transform: rotate(90deg);
+		}
+
+		&-ch {
+			@include control-button;
+			@include control-button-border;
+			grid-area: ch;
+		}
+
+		&-volmin {
+			@include control-button;
+			@include control-button-border;
+			@include control-button-bottom;
+			grid-area: volmin;
+		}
+
+		&-down {
+			@include control-button;
+			@include control-button-rounded;
+			grid-area: down;
+			transform: rotate(180deg);
+		}
+
+		&-chmin {
+			@include control-button;
+			@include control-button-border;
+			@include control-button-bottom;
+			grid-area: chmin;
+		}
+
+		&-mute {
+			@include control-button;
+			grid-area: mute;
+		}
+
+		&-guide {
+			@include control-button;
+			grid-area: guide;
+			border-radius: size($space-small);
+			border: $border-yellow;
+			margin-top: size($space-small);
+		}
+	}
+}
+
+.footer {
+	&__button {
+		@extend .container;
+		@include regular-button;
+		border: $border-yellow;
+		border-end-start-radius: 0;
+		border-end-end-radius: 0;
+		border-bottom: none;
+		overflow: hidden;
+		font-family: $secondary-font;
+		font-size: $fs-regular;
+		font-weight: lighter;
+		width: 100%;
+		text-align: center;
+		span {
+			font-weight: bold;
+		}
+
+		&:focus {
+			border-radius: size(45);
+			border-end-start-radius: 0;
+			border-end-end-radius: 0;
+			border-bottom: none;
+		}
+	}
+}

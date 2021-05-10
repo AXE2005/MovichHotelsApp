@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="./styles/style.css">
 <link rel="stylesheet" type="text/css" href="./fonts/css/fontawesome-all.min.css">
 <link rel="stylesheet" type="text/css" href="./styles/framework.css">
+<link type="text/css" rel="stylesheet" href="./sass/main.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 </head>
 
@@ -21,10 +22,12 @@
 <div id="page-transitions" class="page-build">
     <div class="page-bg fondo"></div>
 
-	<div class="header header-light header-logo-app">
-		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" style="display:none" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
-		<a data-menu-type="menu-box-full" href="./index.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
-    </div>
+	<header>
+        <div class="header__logos">
+            <a href="/"><img src="./images/logo-quadrifolio.png" alt="logo-quadrifolio"></a>
+            <a href=""><img src="./images/logo-smart-hotel.png" alt="logo-smarthotel"></a>
+        </div>
+    </header>
 
 	<div id="menu-1" style="display:none" class="menu menu-sidebar-left menu-settings">
         <div class="menu-bg gradient-body-1"></div>
@@ -47,53 +50,54 @@
         </div>
 	</div>
 
-	<div class="page-content">
 
-
-            <div class="landing-page">
-                <div class="landing-header">
-           <h1 class="center-text text-shadow ultrabold color-white bottom-10">Hotel Quadrifolio - Jackie Smith Room: 201</h1>
+    <main>
+        <div class="main__group">
+            <section class="guest-info">
+                <h1>Jackie Smith</h1>
+                <h3>Room 201</h3>
+            </section>
+            <section class="menu-home">
+                <div class="menu-home__container">
+                    <div class="menu-home__item">
+                        <a href="#"><img src="./images/room-service.svg" alt="room-service"></a>
+                        <p>Room service - Shop</p>
+                    </div>
+                    <div class="menu-home__item">
+                        <a href="#"><img src="./images/restaurant.svg" alt="servicios"></a>
+                        <p>Servicios</p>
+                    </div>
+                    <div class="menu-home__item">
+                        <a href="#"><img src="./images/local-guide.svg" alt="guia-local"></a>
+                        <p>Guia local</p>
+                    </div>
+                    <div class="menu-home__item">
+                        <a href="#"><img src="./images/bill.svg" alt="revisar-cuenta"></a>
+                        <p>Revisar cuenta</p>
+                    </div>
+                    <div class="menu-home__item">
+                        <a href="#"><img src="./images/hotel-info.svg" alt="hotel-info"></a>
+                        <p>Hotel info</p>
+                    </div>
+                    <div class="menu-home__item">
+                        <a href="smarttv.html"><img src="./images/smart-room.svg" alt="smart-room"></a>
+                        <p>Hotel info</p>
+                    </div>
                 </div>
-                <div class="landing-icons ">
-                    <a class="gradiente-menu shadow-icon-large" href="./ofertas.html">
-                        <img src="imgs/shop.svg">
-                        <em>Room sevice - Shop</em>
-                    </a>             
-                    <a class="gradiente-menu shadow-icon-large" href="./tv/app_servicios.html"><!-- onclick="ir('tv/app_servicios.html')" -->
-                        <img src="imgs/concierge-bell-solid.svg">
-                        <em>Servicios</em>
-                    </a>
-                    <a class="gradiente-menu shadow-icon-large" onclick="window.open('http://www.lurebogota.com/', '_system'); return false;" href="#">
-                        <i class="fab fa-glide-g"></i>
-                        <em>Guía Local</em>
-                    </a>
-					<a class="gradiente-menu shadow-icon-large" href="./tv/account.html">
-                        <img src="imgs/cuenta.svg">
-                        <em>Revisar Cuenta</em>
-                    </a>
-					<a class="gradiente-menu shadow-icon-large" href="#">
-                        <img src="imgs/tv.svg">
-                        <em>Controla tu TV</em>
-                    </a>
-					<a class="gradiente-menu shadow-icon-large" href="#">
-                        <img src="imgs/domotica.svg">
-                        <em>Controla tu Habitación</em>
-                    </a>
-                    <div class="clear"></div>
-                </div>
-                
-            </div>
-        
-				
-        <div id="footer-menu" class="footer-menu-4-icons footer-menu-style" >
-            <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="active-nav"><i class="fa fa-globe"></i><span>Idiomas</span></a>
-			<a href="tos.html" onclick="abrir_loader()"><i class="fa fa-cog"></i><span>Privacidad</span></a>
-            <a href="#" onclick="window.open('https://apps.merakitic.com:4433/chat.html', '_system'); return false;"><i class="fa fa-phone"></i><span>Contáctenos</span></a>
-            <a href="#" onclick="salir()"><i class="fa fa-hand-point-right"></i><span>Salir</span></a>
-            <div class="clear"></div>
+            </section>
         </div>
         
-	</div>
+    </main>
+
+        
+
+                <div id="footer-menu" class="footer-menu-4-icons footer-menu-style" >
+                    <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="active-nav"><i class="fa fa-globe"></i><span></span></a>
+                    <a href="#"><i class="fas fa-cog"></i><span></span></a>
+                    <a href="#" onclick="window.open('https://apps.merakitic.com:4433/chat.html', '_system'); return false;"><i class="fa fa-phone"></i><span></span></a>                    
+                    <a href="#" onclick="salir()"><i class="fas fa-sign-out-alt"></i><span></span></a>                    
+                    <div class="clear"></div>
+                </div>
     
     
 	<a href="#" class="back-to-top-badge back-to-top-small shadow-large bg-blue-dark"><i class="fa fa-angle-up"></i>Back to Top</a>

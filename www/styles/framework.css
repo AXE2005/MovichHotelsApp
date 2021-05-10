@@ -669,6 +669,10 @@ h1, h2, h3, h4, h5, h6{
 	font-family:'HypatiaSansPro', sans-serif;
 }
 
+.fuente34 {
+    font-size: 34px;
+}
+
 h1{ font-size:24px; line-height:26px; font-weight:500; margin-bottom:5px;}
 h2{ font-size:21px; line-height:25px; font-weight:500; margin-bottom:5px;}
 h3{ font-size:20px; line-height:24px; font-weight:500; margin-bottom:5px;}
@@ -6129,11 +6133,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     left:0px;
     right:0px;
     z-index:98;
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */								
+	/* 
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); 
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); 
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); 	*/		
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b99b6c+28,b99b6c+96 */
+	background: rgb(185,155,108); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(185,155,108,1) 28.31%, rgba(185,155,108,1) 96.71%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(185,155,108,1) 28.31%,rgba(185,155,108,1) 96.71%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(185,155,108,1) 28.31%,rgba(185,155,108,1) 96.71%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b99b6c', endColorstr='#b99b6c',GradientType=0 ); /* IE6-9 */
     transition:all 250ms ease;
     min-height:60px;
     transition:all 250ms ease;
@@ -6171,8 +6181,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 #footer-menu a i{
-    padding-top: 10px;
-    font-size: 25px;
+    padding-top: 15px;
+    font-size: 30px;
 }
 
 

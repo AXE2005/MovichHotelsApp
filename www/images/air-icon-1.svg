@@ -1,0 +1,22 @@
+<svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="24" fill="#E5E5E5"/>
+<g id="guias y estilos" clip-path="url(#clip0)">
+<rect width="2476" height="2444" transform="translate(-2242 -2157)" fill="white"/>
+<g id="air">
+<path id="Vector 29" d="M4.77637 18.3489V23.0377" stroke="white" stroke-width="1.59358" stroke-linecap="round"/>
+<path id="Vector 30" d="M10.2786 18.3489V21.4748" stroke="white" stroke-width="1.59358" stroke-linecap="round"/>
+<path id="Vector 31" d="M15.7808 18.3489V23.0377" stroke="white" stroke-width="1.59358" stroke-linecap="round"/>
+<path id="Vector 32" d="M21.283 18.3489V21.4748" stroke="white" stroke-width="1.59358" stroke-linecap="round"/>
+<path id="Vector 33" d="M26.7852 18.3489V23.0377" stroke="white" stroke-width="1.59358" stroke-linecap="round"/>
+<path id="Rectangle 43" d="M29.3069 1.26969C30.0404 1.26969 30.6349 1.86425 30.6349 2.59767V13.9775C30.6349 14.711 30.0404 15.3055 29.3069 15.3055H2.25514C1.52172 15.3055 0.92716 14.711 0.92716 13.9775V2.59767C0.92716 1.86425 1.52172 1.26969 2.25514 1.26969H29.3069Z" stroke="white" stroke-width="1.59358"/>
+<path id="Vector 26" d="M1.01074 11.4136H30.6492" stroke="white" stroke-width="1.59358"/>
+<path id="Vector 27" d="M18.373 8.2876H20.7206" stroke="white" stroke-width="1.59358" stroke-linecap="round"/>
+<path id="Vector 28" d="M24.3887 8.2876H26.7363" stroke="white" stroke-width="1.59358" stroke-linecap="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="2476" height="2444" fill="white" transform="translate(-2242 -2157)"/>
+</clipPath>
+</defs>
+</svg>

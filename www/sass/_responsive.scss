@@ -1,0 +1,15 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+.container {
+	max-width: size(400);
+	margin: 0 auto;
+}
+
+@media screen and (min-width: $md) {
+	.container {
+		width: size(800);
+	}
+}
