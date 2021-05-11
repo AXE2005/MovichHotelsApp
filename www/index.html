@@ -1,61 +1,139 @@
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="./sass/main.css">
-    
-    <title>Smart Hotel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Movich |</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+
 </head>
+
 <body>
-    <header>
-        <div class="header__logos">
-            <a href="/"><img src="./images/logo-quadrifolio.png" alt="logo-quadrifolio"></a>
-            <a href=""><img src="./images/logo-smart-hotel.png" alt="logo-smarthotel"></a>
+
+<div id="preloader" class="preloader-light">
+	<a data-menu-type="menu-box-full" href="index.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
+	<div id="preload-spinner"></div>
+</div>
+
+
+<div id="page-transitions" class="page-build">
+    <div class="page-bg fondo"></div>
+
+	<div class="header header-light header-logo-app">
+		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" style="display:none" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
+		<a data-menu-type="menu-box-full" href="#" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
+    </div>
+
+	<div id="menu-1" style="display:none" class="menu menu-sidebar-left menu-settings">
+        <div class="menu-bg gradient-body-1"></div>
+        <div class="menu-scroll">
+            <div class="menu-header">
+                <a class="menu-logo" href="index.html"></a>
+                <h1>Bienvenido</h1>
+                <p>Disfrute la experiencia Movich</p>
+            </div>
+            <div class="menu-list icon-background-active">
+                <em class="menu-divider top-10">Navegación</em>
+                <a class="menu-item active-menu" href="index.html"><i class="fa gradient-green-white fa-home"></i>Home</a>
+                <a class="menu-item" href="hoteles.html"><i class="fa gradient-green-white fa-info"></i>Nuestros Hoteles</a>
+                <a class="menu-item" href="#" onclick="window.open('https://www.movichhotels.com/es/', '_system'); return false;"><i class="fa gradient-green-white fa-file"></i>Reserve Aquí</a>
+                <a class="menu-item" href="huesped.html"><i class="fa gradient-green-white fa-hand-point-right"></i>Log In Huésped</a>
+                <a class="menu-item" href="#" onclick="window.open('https://apps.merakitic.com:4433/chat.html', '_system'); return false;"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
+                <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="menu-item" ><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
+                <a class="menu-item" href="tos.html" onclick="abrir_loader()"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
+            </div>
+            <em class="menu-copyright">Copyright <span class="copyright-year"></span> Smart Hotel. Todos los derechos Reservados</em>
         </div>
-    </header>
-    <main>
-        <div class="main__group">
-            <section class="guest-info">
-                <h1>Jackie Smith</h1>
-                <h3>Room 201</h3>
-            </section>
-            <section class="menu-home">
-                <div class="menu-home__container">
-                    <div class="menu-home__item">
-                        <a href="#"><img src="./images/room-service.svg" alt="room-service"></a>
-                        <p>Room service - Shop</p>
-                    </div>
-                    <div class="menu-home__item">
-                        <a href="#"><img src="./images/restaurant.svg" alt="servicios"></a>
-                        <p>Servicios</p>
-                    </div>
-                    <div class="menu-home__item">
-                        <a href="#"><img src="./images/local-guide.svg" alt="guia-local"></a>
-                        <p>Guia local</p>
-                    </div>
-                    <div class="menu-home__item">
-                        <a href="#"><img src="./images/bill.svg" alt="revisar-cuenta"></a>
-                        <p>Revisar cuenta</p>
-                    </div>
-                    <div class="menu-home__item">
-                        <a href="#"><img src="./images/hotel-info.svg" alt="hotel-info"></a>
-                        <p>Hotel info</p>
-                    </div>
-                    <div class="menu-home__item">
-                        <a href="smarttv.html"><img src="./images/smart-room.svg" alt="smart-room"></a>
-                        <p>Hotel info</p>
-                    </div>
-                </div>
-            </section>
+	</div>
+
+	<div class="page-content">
+
+           <h1 class="center-text text-shadow ultrabold color-white bottom-10" style="padding-top: 120%;">BIENVENIDO A <BR>SMARTHOTEL</h1>
+        
+				
+        <div id="footer-menu" class="footer-menu-2-icons footer-menu-style" >
+            <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="active-nav"><i class="fa fa-globe"></i><span>Idiomas</span></a>
+            <a href="huesped.html"><i class="fa fa-bed"></i><span>Log In Huésped</span></a>
+            <div class="clear"></div>
         </div>
         
-    </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/custom.js"></script>
-</body> 
-</html>
+	</div>
+    
+    
+	<a href="#" class="back-to-top-badge back-to-top-small shadow-large bg-blue-dark"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+
+  <!--idioma-->
+    <div id="menu-share-thumbs" data-menu-height="250" class="menu menu-box-bottom bg-white">
+        <h1 class="center-text top-20 bottom-0 uppercase ultrabold">Idiomas</h1>
+        <p class="color-black center-text font-12 opacity-50 top-0">Escoge el idioma que prefieras para traducir la app:</p>
+        <div class="share-icons">
+            <a href="#" class="close-menu" onClick="traducir('es')"><img src="tv/imgs/es.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('en')"><img src="tv/imgs/en.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('fr')"><img src="tv/imgs/fr.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('pt')"><img src="tv/imgs/pt.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('hi')"><img src="tv/imgs/hi.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('zh-CN')"><img src="tv/imgs/ch.png" width="60px"></a>
+            <div id="google_translate_element" style="display:none !important"></div>
+        </div>
+    </div>
+
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>
+<script type="text/javascript">
+    var deviceReady = function(){
+        if(window.MobileAccessibility){
+            window.MobileAccessibility.usePreferredTextZoom(false);
+        }		
+    }
+    document.addEventListener('deviceready', deviceReady, false);
+	
+	// Aqui Inicializo funciones de esta página papu.
+	controlIntro();
+	
+	var images = ['bg1.png', 'bg2.png', 'bg3.png', 'bg4.png', 'bg5.png'];
+    $('.fondo').css({'background-image': 'url(imgs/' + images[Math.floor(Math.random() * images.length)] + ')'});
+</script>
+
+<script type="text/javascript">
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "es",includedLanguages: "es,pt,fr,zh-CN,en,hi"}, 'google_translate_element');
+}
+
+function traducir(lenguaje) {
+    abrir_loader();
+  var language = lenguaje;
+  localStorage.setItem("mem_lenguaje",language);
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+  cerrar_loader();
+  $(".skiptranslate").hide();
+}
+
+</script>
+
+<script type="text/javascript">
+function autoTranslate(){
+    var langu = localStorage.getItem("mem_lenguaje","");
+    if (langu != ""){traducir(langu)};
+    $(".skiptranslate").hide();
+}
+
+setTimeout(autoTranslate,500);
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
