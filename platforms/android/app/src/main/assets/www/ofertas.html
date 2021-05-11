@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Movich |</title>
+<link rel="stylesheet" type="text/css" href="./styles/style.css">
+<link rel="stylesheet" type="text/css" href="./fonts/css/fontawesome-all.min.css">
+<link rel="stylesheet" type="text/css" href="./styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="preloader" class="preloader-light">
+	<a data-menu-type="menu-box-full" href="./index.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
+	<div id="preload-spinner"></div>
+</div>
+
+
+<div id="page-transitions" class="page-build">
+    <div class="page-bg fondo"></div>
+
+	<div class="header header-light header-logo-app">
+		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" style="display:none" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
+		<a data-menu-type="menu-box-full" href="./index.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
+    </div>
+
+	<div id="menu-1" style="display:none" class="menu menu-sidebar-left menu-settings">
+        <div class="menu-bg gradient-body-1"></div>
+        <div class="menu-scroll">
+            <div class="menu-header">
+                <a class="menu-logo" href="./index_huesped.html"></a>
+                <h1>Bienvenido</h1>
+                <p>Disfrute la experiencia Movich</p>
+            </div>
+            <div class="menu-list icon-background-active">
+                <em class="menu-divider top-10">Navegación</em>
+                <a class="menu-item active-menu" href="./index_huesped.html"><i class="fa gradient-green-white fa-home"></i>Home</a>
+                <a class="menu-item" href="hoteles.html"><i class="fa gradient-green-white fa-info"></i>Nuestros Hoteles</a>
+                <a class="menu-item" href="#" onclick="salir()"><i class="fa gradient-green-white fa-hand-point-right"></i>Salir</a>
+                <a class="menu-item" href="#" onclick="window.open('https://apps.merakitic.com:4433/chat.html', '_system'); return false;"><i class="fa gradient-green-white fa-phone"></i>Contáctenos</a>
+                <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="menu-item" ><i class="fa gradient-green-white fa-globe"></i>Idioma</a>
+                <a class="menu-item" href="tos.html" onclick="abrir_loader()"><i class="fa gradient-green-white fa-cog"></i>Política de Privacidad</a>
+            </div>
+            <em class="menu-copyright">Copyright <span class="copyright-year"></span> Smart Hotel. Todos los derechos Reservados</em>
+        </div>
+	</div>
+
+	<div class="page-content">
+
+
+            <div class="landing-page">
+                <div class="landing-header">           
+                </div>
+                <div class="landing-icons ">
+                    <a class="gradiente-menu shadow-icon-large" href="./tv/room_service.html">
+                        <img src="imgs/room-service.svg">
+                        <em>Room Service</em>
+                    </a>
+                    <a class="gradiente-menu shadow-icon-large" href="./tv/tienda.html">
+                        <img src="imgs/tienda.svg">
+                        <em>Souvenirs & Tienda</em>
+                    </a>
+					<a class="gradiente-menu shadow-icon-large" href="./tv/planes.html">
+                        <img src="imgs/destino.svg">
+                        <em>Paquetes Turísticos</em>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+                
+            </div>
+        
+				
+        <div id="footer-menu" class="footer-menu-3-icons footer-menu-style" >
+            <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="active-nav"><i class="fa fa-globe"></i><span>Idiomas</span></a>
+			<a href="tos.html" onclick="abrir_loader()"><i class="fa fa-cog"></i><span>Privacidad</span></a>
+            <a href="#" onclick="salir()"><i class="fa fa-hand-point-right"></i><span>Salir</span></a>
+            <div class="clear"></div>
+        </div>
+        
+	</div>
+    
+    
+	<a href="#" class="back-to-top-badge back-to-top-small shadow-large bg-blue-dark"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+
+
+<div class="menu menu-box-top gradiente-blanco shadow-large" id="wifi" data-menu-height="315">
+        <div class="content">
+            <h1 class="center-text top-15 bottom-30"><i class="fa fa-wifi font-30 icon-circle icon-l bg-white color-dorado shadow-icon-large"></i></h1>
+            <h1 class="color-black uppercase ultrabold center-text bottom-10 font-27">Sin Conexión</h1>
+            <p class="color-black center-text bottom-30 opacity-50 font-14">
+                Por favor conectate a la red inalámbrica del hotel para acceder a esta y muchas otras funciones que tenemos preparadas para ti.
+            </p>
+            <a href="#" class="close-menu button button-round button-xs button-dorado uppercase ultrabold button-center shadow-icon-small">Aceptar</a>
+        </div>
+    </div>
+
+  <!--idioma-->
+    <div id="menu-share-thumbs" data-menu-height="250" class="menu menu-box-bottom bg-white">
+        <h1 class="center-text top-20 bottom-0 uppercase ultrabold">Idiomas</h1>
+        <p class="color-black center-text font-12 opacity-50 top-0">Escoge el idioma que prefieras para traducir la app:</p>
+        <div class="share-icons">
+            <a href="#" class="close-menu" onClick="traducir('es')"><img src="tv/imgs/es.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('en')"><img src="tv/imgs/en.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('fr')"><img src="tv/imgs/fr.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('pt')"><img src="tv/imgs/pt.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('hi')"><img src="tv/imgs/hi.png" width="60px"></a>
+            <a href="#" class="close-menu" onClick="traducir('zh-CN')"><img src="tv/imgs/ch.png" width="60px"></a>
+            <div id="google_translate_element" style="display:none !important"></div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>
+<script type="text/javascript">
+    var deviceReady = function(){
+        if(window.MobileAccessibility){
+            window.MobileAccessibility.usePreferredTextZoom(false);
+        }		
+    }
+    document.addEventListener('deviceready', deviceReady, false);
+	
+	// Aqui Inicializo funciones de esta página papu.
+	
+	var images = ['bg1.png', 'bg2.png', 'bg3.png', 'bg4.png', 'bg5.png'];
+    $('.fondo').css({'background-image': 'url(imgs/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
+    var contenido = localStorage.getItem("mem_contenido");
+    $('.menu-header').html(contenido);
+</script>
+<script type="text/javascript">
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "es",includedLanguages: "es,pt,fr,zh-CN,en,hi"}, 'google_translate_element');
+}
+
+function traducir(lenguaje) {
+    abrir_loader();
+  var language = lenguaje;
+  localStorage.setItem("mem_lenguaje",language);
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+  cerrar_loader();
+  $(".skiptranslate").hide();
+}
+
+</script>
+
+<script type="text/javascript">
+function autoTranslate(){
+    var langu = localStorage.getItem("mem_lenguaje","");
+    if (langu != ""){traducir(langu)};
+    $(".skiptranslate").hide();
+}
+
+setTimeout(autoTranslate,500);
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>

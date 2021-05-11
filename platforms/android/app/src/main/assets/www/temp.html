@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./sass/main.css">
+    
+    <title>Temperatura</title>
+</head>
+<body>
+    <header>
+        <div class="header__logos">
+            <a href="/"><img src="./images/logo-quadrifolio.png" alt="logo-quadrifolio"></a>
+            <a href=""><img src="./images/logo-smart-hotel.png" alt="logo-smarthotel"></a>
+        </div>
+    </header>
+    <main>
+        <div class="main__group">
+            <section class="open-door">
+                <button id="open-door">Abrir Puerta</button>
+            </section>
+            <section class="main-menu">
+                <div class="main-menu__container">
+                    <div class="main-menu__item">
+                        <a href="smarttv.html"><img src="./images/tv-icon.svg" alt="smart-tv"></a>
+                        <p>Smart TV</p>
+                    </div>
+                    <div class="main-menu__item">
+                        <a href="lights.html"><img src="./images/light-icon.svg" alt="luces"></a>
+                        <p>Luces</p>
+                    </div>
+                    <div class="main-menu__item">
+                        <a href="curtains.html"><img src="./images/curtain-icon.svg" alt="cortinas"></a>
+                        <p>Cortinas</p>
+                    </div>
+                    <div class="main-menu__item">
+                        <a href="temp.html"><img src="./images/air-icon.svg" alt="temperatura"></a>
+                        <p>Temperatura</p>
+                    </div>
+                    <div class="main-menu__item">
+                        <a href="sound.html"><img src="./images/sound-icon.svg" alt="sonido"></a>
+                        <p>Sonido</p>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="content__title temp">
+                    <h2><strong>Temperatura</strong><span>Controla el aire acondicionado</span> </h2>
+                </div>
+                <button id="power-temp" class="content__item power-button">
+                    <p><span>Power On / Off</span></p>
+                </button>
+                <div class="content__item">
+                    <p><span>Fan control</span></p>
+                    <div class="content__item-arrows">
+                        <button id="fan-left" class="arrow-left"></button>
+                        <button id="fan-right" class="arrow-right"></button>
+                    </div>
+                </div>
+                <div class="content__item">
+                    <p><span>Temperature</span></p>
+                    <div class="content__item-arrows">
+                        <button id="temperature-left" class="arrow-left"></button>
+                        <button id="temperature-right" class="arrow-right"></button>
+                    </div>
+                </div>
+                <div class="content__item">
+                    <p><span>Swing direct</span></p>
+                    <button id="swing" class="switch">
+                        <div class="track"></div>
+                    </button>
+                </div>
+                <div class="content__item">
+                    <p><span>Sleep</span> </p>
+                    <button id="slep-temperature" class="switch">
+                        <div class="track"></div>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/custom.js"></script>
+</body> 
+</html>

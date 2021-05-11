@@ -1,0 +1,82 @@
+.open-door {
+	text-align: center;
+	padding: size($space-big);
+	button {
+		background: $boton-cerradura;
+		font-size: $fs-regular;
+		text-transform: uppercase;
+		font-weight: 100;
+		padding: size($space-regular);
+		border: none;
+		border-radius: size($space-small);
+
+		&::before {
+			content: url(../images/close.svg);
+			padding-right: size($space-xs);
+		}
+	}
+}
+
+.guest-info {
+	height: 10vh;
+	@extend .flex-x;
+	@extend .container;
+	justify-content: space-evenly;
+	h1 {
+		color: $color-titulos;
+		font-weight: 400;
+		font-size: $fs-extra;
+	}
+	h3 {
+		color: $blanco;
+		font-weight: lighter;
+		font-size: $fs-big;
+	}
+}
+
+.main-menu {
+	background: $color-primario;
+	@extend .flex-x;
+	justify-content: center;
+
+	&__container {
+		@extend .container;
+		@extend .flex-x;
+		scroll-snap-type: x mandatory;
+		padding: size($space-small) 0;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+
+	&__item {
+		@extend .flex-y;
+		align-items: center;
+		scroll-snap-align: center;
+		a {
+			background: $boton-relleno;
+			border-radius: size($space-small);
+			margin: 0 size($space-regular);
+			width: size(80);
+			height: size(80);
+
+			&:active,
+			&:hover,
+			&:focus {
+				background: $boton-controles-active;
+			}
+
+			img {
+				display: block;
+				margin: 25% auto;
+				height: 50%;
+			}
+		}
+
+		p {
+			color: $blanco;
+			font-weight: 300;
+		}
+	}
+}
+
+

@@ -27,13 +27,13 @@
   },
   "installed_plugins": {
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.movichhotels.smarthotel"
+      "PACKAGE_NAME": "http___wifienter.com"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.movichhotels.smarthotel"
+      "PACKAGE_NAME": "http___wifienter.com"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.movichhotels.smarthotel"
+      "PACKAGE_NAME": "http___wifienter.com"
     }
   },
   "dependent_plugins": {},

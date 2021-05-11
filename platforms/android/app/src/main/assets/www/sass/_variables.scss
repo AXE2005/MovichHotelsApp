@@ -1,0 +1,53 @@
+$font: "Roboto", sans-serif;
+$secondary-font: "Saira Condensed", sans-serif;
+
+//Font size
+$fs-small: 0.75rem; // 12px
+$fs-regular: 1.125rem; // 18
+$fs-big: 1.375rem; // 22
+$fs-extra: 1.875; // 30
+
+//spaces
+
+$space-xs: 5;
+$space-small: 15;
+$space-regular: 20;
+$space-big: 30;
+$space-xl: 50;
+$space-huge: 60;
+
+$border-radius: 0.75rem;
+
+//Size in Rem
+
+$base-size: 16;
+
+//Function to convert px value into rem
+@function size($target, $context: $base-size) {
+	@return ($target / $context) * 1rem;
+}
+
+// use example
+//  font-size: size($fs-big);
+// output:
+// font-size: 1.5rem;
+
+//Colors
+
+$color-primario: #292929;
+$fondo-titulos: #424344;
+$color-titulos: #e9bc77;
+$color-titulos-transparente: #e9bb778a;
+$blanco: white;
+
+$fondo-proyecto: linear-gradient(180deg, #5d5f63 0%, #3a3a3e 100%);
+$boton-relleno: linear-gradient(137.58deg, #b1b5b8 12.76%, #6b7179 92.08%);
+$boton-controles: linear-gradient(93.28deg, #e3b469 7.16%, #ffe071 89.59%);
+$boton-controles-active: linear-gradient(
+	138.88deg,
+	#b99b6c 28.31%,
+	#b99b6c 96.71%
+);
+$boton-cerradura: linear-gradient(93.28deg, #ffc633 7.16%, #ffe071 90.54%);
+
+$border-yellow: 3px solid $color-titulos;

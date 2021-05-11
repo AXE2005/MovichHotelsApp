@@ -1,0 +1,99 @@
+body {
+	font-family: $font;
+	color: $blanco;
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+a:focus,
+button:focus {
+	outline: none;
+	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.247);
+}
+
+a {
+	text-decoration: none;
+}
+
+.flex-x {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-y {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.header__logos {
+	@extend .flex-x;
+	@extend .container;
+	height: 7vh;
+}
+
+main {
+	background: $fondo-proyecto;
+	height: 93vh;
+	@extend .flex-y;
+	justify-content: space-between;
+}
+
+@mixin regular-button($border: size(45)) {
+	background-color: $color-primario;
+	border-radius: $border;
+	border: none;
+	color: $blanco;
+	padding: size($space-small);
+}
+
+@mixin control-button {
+	color: $blanco;
+	font-size: $fs-big;
+	background-color: transparent;
+	border: none;
+}
+
+@mixin control-button-border {
+	border-left: $border-yellow;
+	border-right: $border-yellow;
+}
+
+@mixin control-button-top {
+	border-top-left-radius: $border-radius;
+	border-top-right-radius: $border-radius;
+	border-top: $border-yellow;
+}
+
+@mixin control-button-bottom {
+	border-bottom-left-radius: $border-radius;
+	border-bottom-right-radius: $border-radius;
+	border-bottom: $border-yellow;
+}
+
+@mixin control-button-rounded {
+	border-radius: 50px;
+	border: $border-yellow;
+	width: size($space-xl);
+	height: size($space-xl);
+	margin: auto;
+
+	img {
+		padding-bottom: size($space-xs);
+	}
+}
+
+.footer {
+	background: $boton-controles-active;
+	&__menu {
+		@extend .container;
+		@extend .flex-x;
+		padding: size($space-small);
+		&-item {
+		}
+	}
+}
