@@ -8,13 +8,13 @@
   },
   "installed_plugins": {
     "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "http___wifienter.com"
+      "PACKAGE_NAME": "com.wifienter.smarthotel"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "http___wifienter.com"
+      "PACKAGE_NAME": "com.wifienter.smarthotel"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "http___wifienter.com"
+      "PACKAGE_NAME": "com.wifienter.smarthotel"
     }
   },
   "dependent_plugins": {}

@@ -71,6 +71,7 @@ button:focus {
 a {
   text-decoration: none;
 }
+
 .header__logos{
   background-color: white;
 }
@@ -78,7 +79,7 @@ a {
 .guest-info{
   background: linear-gradient(180deg, #5d5f63 0%, #3a3a3e 100%);
 }
-.flex-x, .header__logos, .footer__menu, .guest-info, .main-menu, .main-menu__container, .menu-home__container, .content__title, .content__item, .content__item-arrows, .content__item-arrows .stop, .content__grid-power {
+.flex-x, .header__logos-login, .header__logos, .footer__menu, .guest-info, .main-menu, .main-menu__container, .menu-home__container, .content__title, .content__item, .content__item-arrows, .content__item-arrows .stop, .content__grid-power {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,6 +106,14 @@ a {
 
 .header__logos {
   height: 7vh;
+}
+
+.header__logos-login {
+  padding: 0.3125rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          background-color: white;
 }
 
 main {

@@ -17,7 +17,7 @@
        under the License.
  */
 
-package http___wifienter.com;
+package com.wifienter.smarthotel;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

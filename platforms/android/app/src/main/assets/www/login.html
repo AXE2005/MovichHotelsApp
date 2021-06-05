@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./sass/main.css">
+    
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="header__logos-login">
+            <a href=""><img src="./images/logo-smart-hotel-login.png" alt="logo-smarthotel"></a>
+        </div>
+    </header>
+    <main>
+        <div class="login">
+            <section class="login__header">
+                <div class="login__container">
+                    <img src="./images/login-icon.svg" alt="login">
+                    <h1>Login <span>Ingresa tus datos</span></h1>
+                </div>
+            </section>
+            <section class="login__content">
+                <form class="login__content-form" action="">
+                    <div class="login__content-group">
+                        <input name="name" type="text" required>
+                        <label for="name">Nombre</label>
+                    </div>
+                    <div class="login__content-group">
+                        <input name="room" type="text" required>
+                        <label for="room">Habitación</label>
+                    </div>
+                    <div class="login__content-group hotel">
+                        <select name="hotel" id="">
+                            <option value="Hotel1">Hotel1</option>
+                        </select>
+                    </div>
+                    <img class="qr" src="./images/qr-code.svg" alt="qr-code">
+                    <button type="submit">Ingresar</button>
+                </form>
+            </section>
+        </div>
+        <div class="footer">
+            <div class="footer__menu">
+                <a href="#" class="footer__menu-item lang">
+                    <img src="./images/lang-icon.svg" alt="language">
+                </a>
+                <a class="footer__menu-item">
+                    <img src="./images/config-icon.svg" alt="config">
+                </a>
+                <a href="#" class="footer__menu-item">
+                    <img src="./images/phone-icon.svg" alt="call">
+                </a>
+                <a href="#" class="footer__menu-item">
+                    <img src="./images/exit-icon.svg" alt="exit">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!--idioma-->
+    <div class="language">
+        <h1 class="language__title">Idiomas</h1>
+        <p class="language__desc">Escoge el idioma que prefieras para traducir la app:</p>
+        <div class="language__icons">
+            <a class="lang" href="#" onClick="traducir('es')"><img src="./images/flags/es.svg" ></a>
+            <a class="lang" href="#" onClick="traducir('fr')"><img src="./images/flags/fr.svg"></a>
+            <a class="lang" href="#" onClick="traducir('en')"><img src="./images/flags/en.svg"></a>
+            <a class="lang" href="#" onClick="traducir('pt')"><img src="./images/flags/pt.svg"></a>
+            <a class="lang" href="#" onClick="traducir('hi')"><img src="./images/flags/hi.svg"></a>
+            <a class="lang" href="#" onClick="traducir('zh-CN')"><img src="./images/flags/ch.svg"></a>
+            <div id="google_translate_element">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./js/main.js"></script>
+    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: "es", includedLanguages: "es,pt,fr,zh-CN,en,hi" }, 'google_translate_element');
+        }
+
+        function traducir(lenguaje) {
+            var language = lenguaje;
+            localStorage.setItem("mem_lenguaje", language);
+            var selectField = document.querySelector("#google_translate_element select");
+            for (var i = 0; i < selectField.children.length; i++) {
+                var option = selectField.children[i];
+                if (option.value == language) {
+                    selectField.selectedIndex = i;
+                    selectField.dispatchEvent(new Event('change'));
+                    break;
+                }
+            }
+            
+            $(".skiptranslate").hide();
+        }
+    </script>
+    
+    <script type="text/javascript">
+        function autoTranslate() {
+            var langu = localStorage.getItem("mem_lenguaje", "");
+            if (langu != "") { traducir(langu) };
+            $(".skiptranslate").hide();
+        }
+        setTimeout(autoTranslate, 500);
+    </script>
+</body> 
+</html>

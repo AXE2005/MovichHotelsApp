@@ -9,7 +9,20 @@
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
 <link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link type="text/css" rel="stylesheet" href="./sass/main.css">
+
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+<style>
+
+    .qr {
+        width: 3.5625rem;
+        background: linear-gradient(138.88deg, #b99b6c 28.31%, #b99b6c 96.71%);
+        padding: 0.75rem;
+        border-radius: 0.75rem;
+        margin-left: 40%;
+    }
+</style>
 
 </head>
 
@@ -22,13 +35,12 @@
 
 
 <div id="page-transitions" class="page-build">
-    <div class="page-bg fondo"></div>
 
-	<div class="header header-light header-logo-app">
-		<a data-menu="menu-1" data-menu-type="menu-sidebar-left-push" href="#" style="display:none" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
-		<a data-menu-type="menu-box-full" href="index.html" class="header-icon header-icon-m"><img height="40px" width="auto" src="./images/logo.png"></a>
-    </div>
-
+	
+        <div class="header__logos-login">
+            <a href=""><img src="./images/logo-smart-hotel-login.png" alt="logo-smarthotel"></a>
+        </div>
+    </header>
 	<div id="menu-1" style="display:none" class="menu menu-sidebar-left menu-settings">
         <div class="menu-bg gradient-body-1"></div>
         <div class="menu-scroll">
@@ -53,53 +65,54 @@
 
 	<div class="page-content">
 
-
+        <div class="page-login top-40">            
+            <div class="content bottom-0">
+                <h3 class="uppercase ultrabold top-10 bottom-0">Login</h3>
+                <p class="smaller-text bottom-15">Hola, ingresa tus datos para disfrutar de una experiencia a tu medida.</p>
+                <div class="page-login-field top-15">
+                    <i class="fa fa-user"></i>
+                    <input type="text" placeholder="Nombre o Apellido" id="nombre" autofocus style="background-color: white;">
+                    <em>(requerido)</em>
+                </div>
+                <div class="page-login-field top-20">
+                    <i class="fa fa-bed"></i>
+                    <input type="text" placeholder="Habitación" id="room" style="background-color: white;">
+                    <em>(requerido)</em>
+                </div>
+                <div class="page-login-field bottom-20">
+                        <select id="select-beast" type="text" placeholder="Seleccione o Escriba el Nombre de Su Hotel" value=""  name="hotel" required>
+                            <optgroup label="Cartagena">
+                            <option value="https://techworldcia.co" selected>Hotel Cuadrifolio</option>
+                            </optgroup>
+                            <optgroup label="Bogota">
+                                <option value="http://186.116.1.117">Casa Dann Carlton</option>
+                                </optgroup>
+                            <!--<optgroup label="Cartagena">
+                            <option value="186.116.1.117">Movich Cartagena de Indias</option>
+                            </optgroup>
+                            <optgroup label="Medellin">
+                            <option value="186.116.1.117">Intercontinental Medellín</option>
+                            <option value="186.116.1.117">Movich Las Lomas</option>
+                            </optgroup>
+                            <optgroup label="Pereira">
+                            <option value="http://201.217.210.58:5000">Movich Pereira</option>
+                            </optgroup>
+                            <optgroup label="Barranquilla">
+                            <option value="http://190.67.32.254:5001">Movich Bur&oacute; 51</option>
+                            </optgroup>
+                            <optgroup label="Cali">
+                            <option value="http://186.117.128.5:5000">Movich Casa del Alférez</option>
+                            </optgroup>-->
+                        </select>
+                </div>
+                <div> <img class="qr" src="./images/qr-code.svg" alt="qr-code"></div>
+                <a href="#" onClick="huesped()" class="button button-dark button-full shadow-icon-large button-round button-s uppercase ultrabold">Ingresar</a>
+                <a href="#" data-menu="warning-1" data-menu-type="menu-box-top" id="war" style="display:none"></a>
+            </div>
+        </div>
 		<div class="cover-item cover-item-full " >
             <div class="cover-content-center color-white">
-                <div class="page-login gradient-body-1 top-0">            
-                    <div class="content bottom-0">
-                        <h3 class="uppercase ultrabold top-10 bottom-0">Login</h3>
-                        <p class="smaller-text bottom-15">Hola, ingresa tus datos para disfrutar de una experiencia a tu medida.</p>
-                        <div class="page-login-field top-15">
-                            <i class="fa fa-user"></i>
-                            <input type="text" placeholder="Nombre o Apellido" id="nombre" autofocus>
-                            <em>(requerido)</em>
-                        </div>
-                        <div class="page-login-field top-20">
-                            <i class="fa fa-bed"></i>
-                            <input type="text" placeholder="Habitación" id="room">
-                            <em>(requerido)</em>
-                        </div>
-                        <div class="page-login-field bottom-20">
-                        		<select id="select-beast" type="text" placeholder="Seleccione o Escriba el Nombre de Su Hotel" value=""  name="hotel" required>
-									<optgroup label="Cartagena">
-									<option value="https://techworldcia.co" selected>Hotel Cuadrifolio</option>
-									</optgroup>
-                                    <optgroup label="Bogota">
-                                        <option value="http://186.116.1.117">Casa Dann Carlton</option>
-                                        </optgroup>
-									<!--<optgroup label="Cartagena">
-									<option value="186.116.1.117">Movich Cartagena de Indias</option>
-									</optgroup>
-									<optgroup label="Medellin">
-									<option value="186.116.1.117">Intercontinental Medellín</option>
-                                    <option value="186.116.1.117">Movich Las Lomas</option>
-									</optgroup>
-									<optgroup label="Pereira">
-									<option value="http://201.217.210.58:5000">Movich Pereira</option>
-									</optgroup>
-                                    <optgroup label="Barranquilla">
-                                    <option value="http://190.67.32.254:5001">Movich Bur&oacute; 51</option>
-                                    </optgroup>
-                                    <optgroup label="Cali">
-                                    <option value="http://186.117.128.5:5000">Movich Casa del Alférez</option>
-                                    </optgroup>-->
-								</select>
-                        </div>
-                        <a href="#" onClick="huesped()" class="button button-dark button-full shadow-icon-large button-round button-s uppercase ultrabold">Ingresar</a>
-                        <a href="#" data-menu="warning-1" data-menu-type="menu-box-top" id="war" style="display:none"></a>
-                    </div>
-                </div>
+                
             </div>
         </div>
         

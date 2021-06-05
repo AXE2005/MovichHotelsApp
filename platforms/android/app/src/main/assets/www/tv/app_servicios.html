@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/framework.css">
+  <link type="text/css" rel="stylesheet" href="../sass/main.css">
 
 	<title>Cuenta</title>
 
@@ -122,17 +123,6 @@ console.log("abro funccsdsds");
 						</button>					
 
                     </div>
-					<div class="card-text text-white text-center">
-						
-                        <button type="button" class="col botones round-corners-menu-btn selectable texto-centrado" onclick="alert('Esta funcionalidad no se encuentra activa actualmente en su Hotel, le invitamos a utilizar nuestro centro de negocios.')">
-							<img class="botones" src="./imagesjv/icon_imprimir.svg" alt="Chrome">
-                            <br><span style="white-space: normal;font-size: 1rem">Imprimir</span>
-						</button>
-                        <button type="button" class="col botones round-corners-menu-btn selectable texto-centrado">
-							<a href="./reservas.html" ><img class="botones" src="./imagesjv/icon_reservas.svg" alt="Chrome">
-                            <br><span style="white-space: normal;font-size: 1rem">Reservas</span>
-						</a></button>
-					</div>
 			
 				</div>
             
@@ -148,10 +138,10 @@ console.log("abro funccsdsds");
 				</div>    
     
         <div id="footer-menu" class="footer-menu-3-icons footer-menu-style" >
-            <a href="../hoteles.html" class="active-nav"><i class="fa fa-info"></i><span>Nuestros Hoteles</span></a>
-            <a href="https://reservations.travelclick.com/110362" onclick="abrir_loader()"><i class="fa fa-calendar"></i><span>Reserve Aqui</span></a>
-            <a href="../huesped.html"><i class="fa fa-bed"></i><span>Log In Huésped</span></a>
-            <div class="clear"></div>
+          <a href="#" data-menu="menu-share-thumbs" data-menu-type="menu-box-bottom" class="active-nav"><i class="fa fa-globe"></i><span></span></a>
+          <a href="#"><i class="fas fa-cog"></i><span></span></a>                   
+          <a href="#" onclick="salir()"><i class="fas fa-sign-out-alt"></i><span></span></a>                    
+          <div class="clear"></div>
         </div>
         
 	</div>
