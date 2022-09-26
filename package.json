@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/AXE2005/MovichHotelsApp#readme",
   "dependencies": {
-    "@ionic/cli": "^6.11.1"
+    "@ionic/cli": "^6.20.1"
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.2.4",
